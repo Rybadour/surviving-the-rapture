@@ -1,14 +1,18 @@
 import * as d3 from "d3-timer";
 
-import React, { createContext, useEffect, useState } from "react";
-import { setCommentRange } from "typescript";
+import { createContext, useEffect, useState } from "react";
+
+type Stats = {
+  energy: number;
+  charge: number;
+};
 
 const maxCharge = 1;
 const chargeSpeed = 0.1;
 const chargeDecay = 0.01;
 
 const defaultContext = {
-  charge: 0,
+  stats: {energy: 0, charge: 0},
   startCharge: () => {},
   stopCharge: () => {},
 };
@@ -16,7 +20,10 @@ export const UnimatrixContext = createContext(defaultContext);
 
 let lastTimer = 0;
 export function UnimatrixProvider(props: Record<string, any>) {
-  const [charge, setCharge] = useState(0);
+  const [stats, setStats] = useState<Stats>({
+    energy: 0,
+    charge: 0,
+  });
   const [charging, setCharging] = useState(false);
 
   useEffect(() => {
@@ -27,14 +34,23 @@ export function UnimatrixProvider(props: Record<string, any>) {
 
   function frame(elapsed: number) {
     const delta = (elapsed - lastTimer)/1000;
+    let {charge, energy} = stats;
+
     // Charge
     if (charging) {
       if (charge < maxCharge) {
-        setCharge(charge + delta * chargeSpeed);
+        charge += delta * chargeSpeed;
       }
     } else if (charge > 0) {
-      setCharge(charge - delta * chargeDecay);
+      charge -= delta * chargeDecay;
     }
+
+    // Energy
+    if (charge > 0) {
+      energy += delta * charge;
+    }
+
+    setStats({charge, energy});
   }
 
   function startCharge() {
@@ -44,5 +60,8 @@ export function UnimatrixProvider(props: Record<string, any>) {
     setCharging(false);
   }
 
-  return <UnimatrixContext.Provider value={{ charge, startCharge, stopCharge }} {...props} />;
+  return <UnimatrixContext.Provider value={{
+    stats,
+    startCharge, stopCharge
+  }} {...props} />;
 }
