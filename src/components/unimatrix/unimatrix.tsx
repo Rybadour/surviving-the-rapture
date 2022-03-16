@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import './unimatrix.css';
-import { UnimatrixContext } from "../contexts/unimatrix";
+import { UnimatrixContext } from "../../contexts/unimatrix";
 
 export function Unimatrix() {
     const unimatrix = useContext(UnimatrixContext);

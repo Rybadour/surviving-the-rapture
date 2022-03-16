@@ -1,14 +1,19 @@
-import { getItemIcon } from '../shared/item-helper';
-import { ItemType } from '../shared/types';
+import { useContext } from 'react';
+import { InventoryContext } from '../../contexts/inventory';
+import { getItemIcon } from '../../shared/item-helper';
+import { ItemType } from '../../shared/types';
 import './inventory.css';
 
 export function Inventory() {
-    const items = [1, 5, 1299];
+    const inventory = useContext(InventoryContext);
+
     return <div className="inventory">
       <header className="App-header">Inventory</header>
 
       <div className="inventory-grid">
-        {items.map(i => <Item type={ItemType.Wires} quantity={i} />)}
+        {Array.from(inventory.items, ([item, quantity]) => 
+          <Item key={item} type={item} quantity={quantity} />
+        )}
       </div>
     </div>;
 }
