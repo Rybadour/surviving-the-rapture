@@ -15,6 +15,7 @@ export function Exploration() {
   }, [exploration, inventory]);
 
   return <div className="exploration">
+    <h2>Exploration</h2>
     {(exploration.isExploring ?
       <>
         <p>Exploring!</p>

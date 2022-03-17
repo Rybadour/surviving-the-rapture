@@ -43,6 +43,9 @@ export function UnimatrixProvider(props: Record<string, any>) {
       }
     } else if (charge > 0) {
       charge -= delta * chargeDecay;
+      if (charge < 0) {
+        charge = 0;
+      }
     }
 
     // Energy
@@ -50,7 +53,9 @@ export function UnimatrixProvider(props: Record<string, any>) {
       energy += delta * charge;
     }
 
-    setStats({charge, energy});
+    if (charge != stats.charge || energy != stats.energy) {
+      setStats({charge, energy});
+    }
   }
 
   function startCharge() {
