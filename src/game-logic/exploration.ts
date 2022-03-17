@@ -1,10 +1,10 @@
 import * as d3 from "d3-timer";
-import { useEffect } from "react";
 
 import { ExplorationContext } from "../contexts/exploration";
 import { InventoryContext } from "../contexts/inventory";
 import { ItemType } from "../shared/types";
-
+import config from '../config/exploration.json';
+import { randomBetween } from "../shared/utils";
 
 const explorationTime = 3000;
 
@@ -18,10 +18,23 @@ export function startExploring(inventory: InventoryContext, exploration: Explora
         return;
       }
 
-      inventory.addItem(ItemType.Wires, 1);
+      inventory.addItems(getRandomLoot());
+
       timer.stop();
       exploration.stopExploring();
       resolve(true);
     });
   });
+}
+
+export function getRandomLoot() {
+  const items: Map<ItemType, number> = new Map(); 
+
+  config.loot.forEach(loot => {
+    if (loot.chance > Math.random()) {
+      const quantity = Math.round(randomBetween(loot.min, loot.max));
+      items.set(ItemType[loot.type as keyof typeof ItemType], quantity);
+    }
+  });
+  return items;
 }

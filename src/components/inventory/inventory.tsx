@@ -8,7 +8,7 @@ export function Inventory() {
     const inventory = useContext(InventoryContext);
 
     return <div className="inventory">
-      <header className="App-header">Inventory</header>
+      <h2>Inventory</h2>
 
       <div className="inventory-grid">
         {Array.from(inventory.items, ([item, quantity]) => 

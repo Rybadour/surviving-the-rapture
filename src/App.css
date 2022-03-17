@@ -24,3 +24,7 @@ body, html {
 .App > * {
   width: 400px;
 }
+
+h2 {
+  margin-top: 0;
+}

@@ -1,5 +1,10 @@
 export enum ItemType {
   Wires,
   MachineParts,
-  SteelParts,
+  ScrapElectronics,
+  ScrapMetal,
+  CPU,
+  MicroController,
+  Motor,
+  LightBulb,
 };

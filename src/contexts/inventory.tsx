@@ -6,6 +6,7 @@ type ItemsByType = Map<ItemType, number>;
 export type InventoryContext = {
   items: ItemsByType,
   addItem: (item: ItemType, quantity: number) => void,
+  addItems: (newItems: ItemsByType) => void,
   canAfford: (item: ItemType, quantity: number) => boolean,
   removeItem: (item: ItemType, quantity: number) => boolean,
 };
@@ -13,6 +14,7 @@ export type InventoryContext = {
 const defaultContext: InventoryContext  = {
   items: new Map(),
   addItem: (item: ItemType, quantity: number) => {},
+  addItems: (newItems: ItemsByType) => {},
   canAfford: (item: ItemType, quantity: number) => false,
   removeItem: (item: ItemType, quantity: number) => false,
 };
@@ -25,6 +27,14 @@ export function InventoryProvider(props: Record<string, any>) {
     let stack = (items.get(item) ?? 0); 
     stack += quantity;
     setItems(new Map(items).set(item, stack));
+  }
+
+  function addItems(newItems: Map<ItemType, number>) {
+    const itemsCopy = new Map(items);
+    newItems.forEach((quantity, type) => 
+      itemsCopy.set(type, quantity + (items.get(type) ?? 0))
+    );
+    setItems(itemsCopy);
   }
 
   function canAfford(item: ItemType, quantity: number) {
@@ -45,6 +55,6 @@ export function InventoryProvider(props: Record<string, any>) {
 
   return <InventoryContext.Provider value={{
     items,
-    addItem, canAfford, removeItem
+    addItem, addItems, canAfford, removeItem
   }} {...props} />;
 }

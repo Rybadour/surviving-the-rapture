@@ -8,7 +8,7 @@ export function Unimatrix() {
     const {energy, charge} = unimatrix.stats;
 
     return <div className="unimatrix">
-      <header className="App-header">Unimatrix</header>
+      <h2>Unimatrix</h2>
 
       <div className="energy">
         <div className="energy-value">{energy.toFixed(1)} joules</div>
