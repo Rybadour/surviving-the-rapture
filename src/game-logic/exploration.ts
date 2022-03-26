@@ -2,13 +2,12 @@ import * as d3 from "d3-timer";
 
 import { ExplorationContext } from "../contexts/exploration";
 import { InventoryContext } from "../contexts/inventory";
-import { ItemType } from "../shared/types";
-import config from '../config/exploration.json';
+import { ItemType, RoomConfig } from "../shared/types";
 import { randomBetween } from "../shared/utils";
 
 const explorationTime = 3000;
 
-export function startExploring(inventory: InventoryContext, exploration: ExplorationContext) {
+export function startExploring(inventory: InventoryContext, exploration: ExplorationContext, room: RoomConfig) {
   exploration.startExploring();
 
   return new Promise((resolve, reject) => {
@@ -18,7 +17,7 @@ export function startExploring(inventory: InventoryContext, exploration: Explora
         return;
       }
 
-      inventory.addItems(getRandomLoot());
+      inventory.addItems(getRandomLoot(room));
 
       timer.stop();
       exploration.stopExploring();
@@ -27,13 +26,13 @@ export function startExploring(inventory: InventoryContext, exploration: Explora
   });
 }
 
-export function getRandomLoot() {
+export function getRandomLoot(room: RoomConfig) {
   const items: Map<ItemType, number> = new Map(); 
 
-  config.loot.forEach(loot => {
+  room.loot.forEach(loot => {
     if (loot.chance > Math.random()) {
       const quantity = Math.round(randomBetween(loot.min, loot.max));
-      items.set(ItemType[loot.type as keyof typeof ItemType], quantity);
+      items.set(loot.item, quantity);
     }
   });
   return items;
