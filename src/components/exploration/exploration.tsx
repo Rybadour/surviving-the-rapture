@@ -26,8 +26,6 @@ export function Exploration() {
       </> : null
     )}
 
-    <img src="icons/wire-coil.png" />
-
     <div className="map">
       {Object.entries(exploration.rooms).map(([r, room]) =>
         <div className="room" key={r}
