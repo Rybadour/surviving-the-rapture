@@ -15,7 +15,13 @@ export function Unimatrix() {
         <div className="energy-progress"></div>
       </div>
 
-      <div className="charge" onMouseDown={unimatrix.startCharge} onMouseUp={unimatrix.stopCharge}>
+      <div className="charge"
+        onMouseDown={unimatrix.startCharge}
+        onMouseUp={unimatrix.stopCharge}
+        onTouchStart={unimatrix.startCharge}
+        onTouchCancel={unimatrix.stopCharge}
+        onTouchEnd={unimatrix.stopCharge}
+      >
         <div className="charge-value">{charge.toFixed(2)} J/s</div>
         <div className="charge-progress">
           <div className="charge-progress-bar" style={{width: (charge/1)*100 + "%"}}></div>

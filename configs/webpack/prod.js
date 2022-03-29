@@ -1,4 +1,5 @@
 // production config
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { merge } = require("webpack-merge");
 const { resolve } = require("path");
 
@@ -10,8 +11,12 @@ module.exports = merge(commonConfig, {
   output: {
     filename: "js/bundle.[contenthash].min.js",
     path: resolve(__dirname, "../../dist"),
-    publicPath: "/",
+    publicPath: "",
   },
   devtool: "source-map",
-  plugins: [],
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: "../public" }],
+    }),
+  ],
 });

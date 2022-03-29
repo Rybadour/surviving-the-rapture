@@ -10,4 +10,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-module.hot.accept();
+if (module && module.hot && module.hot.accept)
+  module.hot.accept();
