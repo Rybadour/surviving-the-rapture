@@ -25,21 +25,21 @@ export function Exploration() {
     <h2>Exploration</h2>
     <div className="exploration-container">
       <div className="map">
-        {Object.entries(exploration.rooms).map(([r, room]) =>
-          <div
-            className={classNames('room', {selected: exploration.selectedRoom == room})}
-            key={r}
-            onClick={() => onSelectRoom(room)}
-            style={{
-              left: room.x,
-              top: room.y,
-              width: room.width,
-              height: room.height,
-            }}
-          >
-            <div>{room.name}</div>
-          </div>
-        )}
+          {Object.entries(exploration.rooms).map(([r, room]) => (
+            <div
+              className={classNames('room', {selected: exploration.selectedRoom == room})}
+              key={r}
+              onClick={() => onSelectRoom(room)}
+              style={{
+                left: room.x,
+                top: room.y,
+                width: room.width,
+                height: room.height,
+              }}
+            >
+              {room.width > 30 && room.height > 30 ? <div>{room.name}</div> : null}
+            </div>
+        ))}
       </div>
 
       {(exploration.selectedRoom ?

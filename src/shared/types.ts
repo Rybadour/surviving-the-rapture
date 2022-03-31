@@ -9,13 +9,14 @@ export enum ItemType {
   MicroController = "MicroController",
   Motor = "Motor",
   LightBulb = "LightBulb",
-};
+}
 
 export type RoomConfig = {
-  name: string,
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-  loot: ItemsByType,
+  name: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  loot: ItemsByType;
+  explorationTime: number;
 };

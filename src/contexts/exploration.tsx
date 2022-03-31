@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { createContext, useState } from "react";
 
-import config from '../config/exploration';
+import rooms from "../config/exploration";
 import { RoomConfig } from "../shared/types";
 
 export type ExplorationContext = {
@@ -8,10 +9,10 @@ export type ExplorationContext = {
   progress: number;
   rooms: Record<string, RoomConfig>;
   selectedRoom: RoomConfig | null;
-  startExploring: () => void,
-  updateProgress: (progress: number) => void,
-  stopExploring: () => void,
-  setSelectedRoom: (room: RoomConfig) => void,
+  startExploring: () => void;
+  updateProgress: (progress: number) => void;
+  stopExploring: (room: RoomConfig) => void;
+  setSelectedRoom: (room: RoomConfig) => void;
 };
 
 const defaultContext: ExplorationContext = {
@@ -21,7 +22,7 @@ const defaultContext: ExplorationContext = {
   selectedRoom: null,
   startExploring: () => {},
   updateProgress: (progress: number) => {},
-  stopExploring: () => {},
+  stopExploring: (room: RoomConfig) => {},
   setSelectedRoom: (room: RoomConfig) => {},
 };
 export const ExplorationContext = createContext(defaultContext);
@@ -29,7 +30,6 @@ export const ExplorationContext = createContext(defaultContext);
 export function ExplorationProvider(props: Record<string, any>) {
   const [isExploring, setIsExploring] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [rooms, setRooms] = useState<Record<string, RoomConfig>>(config);
   const [selectedRoom, setSelectedRoom] = useState<RoomConfig | null>(null);
 
   function startExploring() {
@@ -37,12 +37,23 @@ export function ExplorationProvider(props: Record<string, any>) {
     setIsExploring(true);
   }
 
-  function stopExploring() {
+  function stopExploring(room: RoomConfig) {
     setIsExploring(false);
   }
 
-  return <ExplorationContext.Provider value={{
-    isExploring, progress, rooms, selectedRoom,
-    startExploring, updateProgress: setProgress, stopExploring, setSelectedRoom,
-  }} {...props} />;
+  return (
+    <ExplorationContext.Provider
+      value={{
+        isExploring,
+        progress,
+        rooms,
+        selectedRoom,
+        startExploring,
+        updateProgress: setProgress,
+        stopExploring,
+        setSelectedRoom,
+      }}
+      {...props}
+    />
+  );
 }
