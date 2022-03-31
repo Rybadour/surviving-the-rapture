@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { ItemType } from "../shared/types";
 
-type ItemsByType = Map<ItemType, number>;
+export type ItemsByType = Map<ItemType, number>;
 
 export type InventoryContext = {
   items: ItemsByType,

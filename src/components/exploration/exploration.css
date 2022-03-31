@@ -13,18 +13,44 @@ h2 {
   background: white;
 }
 
+.exploration {
+  width: 100%;
+}
+
+.exploration-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
 .map {
-  width: 200px;
-  height: 200px;
+  aspect-ratio: 1/1;
   background-color: black;
   border-radius: 5px;
   position: relative;
+  width: 50%;
 }
 
 .room {
   position: absolute;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: grey;
+}
+.room.selected {
+  box-shadow: 0px 0px 10px 2px white;
+}
+
+.room-details {
+  flex: 1;
+  margin-left: 30px;
+  width: auto;
 }
 
 .space {

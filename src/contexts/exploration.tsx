@@ -7,18 +7,22 @@ export type ExplorationContext = {
   isExploring: boolean;
   progress: number;
   rooms: Record<string, RoomConfig>;
+  selectedRoom: RoomConfig | null;
   startExploring: () => void,
   updateProgress: (progress: number) => void,
   stopExploring: () => void,
+  setSelectedRoom: (room: RoomConfig) => void,
 };
 
 const defaultContext: ExplorationContext = {
   isExploring: false,
   progress: 0,
   rooms: {},
+  selectedRoom: null,
   startExploring: () => {},
   updateProgress: (progress: number) => {},
   stopExploring: () => {},
+  setSelectedRoom: (room: RoomConfig) => {},
 };
 export const ExplorationContext = createContext(defaultContext);
 
@@ -26,6 +30,7 @@ export function ExplorationProvider(props: Record<string, any>) {
   const [isExploring, setIsExploring] = useState(false);
   const [progress, setProgress] = useState(0);
   const [rooms, setRooms] = useState<Record<string, RoomConfig>>(config);
+  const [selectedRoom, setSelectedRoom] = useState<RoomConfig | null>(null);
 
   function startExploring() {
     setProgress(0);
@@ -37,7 +42,7 @@ export function ExplorationProvider(props: Record<string, any>) {
   }
 
   return <ExplorationContext.Provider value={{
-    isExploring, progress, rooms,
-    startExploring, updateProgress: setProgress, stopExploring
+    isExploring, progress, rooms, selectedRoom,
+    startExploring, updateProgress: setProgress, stopExploring, setSelectedRoom,
   }} {...props} />;
 }

@@ -1,24 +1,21 @@
+import { ItemsByType } from "../contexts/inventory";
+
 export enum ItemType {
-  Wires,
-  MachineParts,
-  ScrapElectronics,
-  ScrapMetal,
-  CPU,
-  MicroController,
-  Motor,
-  LightBulb,
+  Wires = "Wires",
+  MachineParts = "MachineParts",
+  ScrapElectronics = "ScrapElectronics",
+  ScrapMetal = "ScrapMetal",
+  CPU = "CPU",
+  MicroController = "MicroController",
+  Motor = "Motor",
+  LightBulb = "LightBulb",
 };
 
 export type RoomConfig = {
-  image: string,
+  name: string,
   x: number,
   y: number,
   width: number,
   height: number,
-  loot: {
-    item: ItemType,
-    chance: number,
-    min: number,
-    max: number,
-  }[],
+  loot: ItemsByType,
 };
