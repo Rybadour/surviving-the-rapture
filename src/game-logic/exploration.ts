@@ -4,7 +4,7 @@ import { ExplorationContext } from "../contexts/exploration";
 import { InventoryContext } from "../contexts/inventory";
 import { Room, RoomConfig } from "../shared/types";
 
-const explorationTimeFactor = 0.5;
+const explorationTimeFactor = 0.05;
 
 export function startExploring(inventory: InventoryContext, exploration: ExplorationContext, room: Room) {
   exploration.startExploring(room);
@@ -20,7 +20,7 @@ export function startExploring(inventory: InventoryContext, exploration: Explora
       inventory.addItems(room.loot);
 
       timer.stop();
-      exploration.stopExploring(room);
+      exploration.completeExploring(room);
       resolve(true);
     });
   });

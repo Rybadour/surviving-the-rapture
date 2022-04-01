@@ -7,6 +7,7 @@ import { startExploring } from "../../game-logic/exploration";
 import { Room, RoomConfig } from "../../shared/types";
 import { range } from "../../shared/utils";
 import './exploration.css';
+import rooms from "../../config/exploration";
 
 export function Exploration() {
   const exploration = useContext(ExplorationContext);
@@ -18,7 +19,7 @@ export function Exploration() {
   }, [exploration, inventory]);
 
   const onSelectRoom = useCallback((room: Room) => {
-    exploration.setSelectedRoom(room);
+    exploration.setSelectedRoom(room.id);
   }, [exploration]);
 
   return <div className="exploration">
@@ -29,7 +30,7 @@ export function Exploration() {
           .filter(([r, room]) => room.isDiscovered)
           .map(([r, room]) => (
             <div
-              className={classNames('room', {selected: exploration.selectedRoom == room})}
+              className={classNames('room', {selected: exploration.selectedRoom == room.id})}
               key={r}
               onClick={() => onSelectRoom(room)}
               style={{
@@ -44,20 +45,33 @@ export function Exploration() {
         ))}
       </div>
 
-      {(exploration.selectedRoom ?
-      <div className="room-details">
-        <h3>Room: {exploration.selectedRoom.name}</h3>
-        <button className="explore-button" onClick={() => onExplore(exploration.selectedRoom)}>Explore</button>
-        {(exploration.isExploring ?
-          <>
-            <p>Exploring!</p>
-            <div className="progress">
-              <div className="progress-bar" style={{width: exploration.progress*100 + "%"}}></div>
-            </div>
-          </> : null
-        )}
-      </div> : null
+      {(exploration.selectedRoom != "" ?
+        <RoomDetails
+          room={exploration.rooms[exploration.selectedRoom]}
+          exploration={exploration}
+          onExplore={() => onExplore(exploration.rooms[exploration.selectedRoom])}
+        /> : null
       )}
     </div>
   </div>;
+}
+
+function RoomDetails(props: {room: Room, exploration: ExplorationContext, onExplore: () => void}) {
+  return (
+    <div className="room-details">
+      <h3>Room: {props.room.name}</h3>
+      {(props.room.isExplored ?
+        <div>Explored!</div> :
+        <button className="explore-button" onClick={() => props.onExplore()}>Explore</button>
+      )}
+      {(props.exploration.isExploring ?
+        <>
+          <p>Exploring!</p>
+          <div className="progress">
+            <div className="progress-bar" style={{ width: props.exploration.progress * 100 + "%" }}></div>
+          </div>
+        </> : null
+      )}
+    </div>
+  );
 }

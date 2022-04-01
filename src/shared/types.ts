@@ -12,6 +12,7 @@ export enum ItemType {
 }
 
 export type RoomConfig = {
+  id: string;
   name: string;
   x: number;
   y: number;
@@ -24,6 +25,7 @@ export type RoomConfig = {
 
 export type Room = RoomConfig & {
   isDiscovered: boolean;
+  isKnown: boolean;
   isExplored: boolean;
   currentProgress: number;
   remainingItems: ItemType[];

@@ -8,22 +8,24 @@ export type ExplorationContext = {
   isExploring: boolean;
   progress: number;
   rooms: Record<string, Room>;
-  selectedRoom: Room | null;
+  selectedRoom: string;
   startExploring: (room: Room) => void;
   updateProgress: (progress: number) => void;
   stopExploring: (room: Room) => void;
-  setSelectedRoom: (room: Room) => void;
+  completeExploring: (room: Room) => void,
+  setSelectedRoom: (roomId: string) => void;
 };
 
 const defaultContext: ExplorationContext = {
   isExploring: false,
   progress: 0,
   rooms: {},
-  selectedRoom: null,
+  selectedRoom: "",
   startExploring: (room: Room) => {},
   updateProgress: (progress: number) => {},
   stopExploring: (room: Room) => {},
-  setSelectedRoom: (room: Room) => {},
+  completeExploring: (room: Room) => {},
+  setSelectedRoom: (roomId: string) => {},
 };
 export const ExplorationContext = createContext(defaultContext);
 
@@ -33,6 +35,7 @@ Object.keys(roomConfig)
   .forEach((roomId) => defaultRooms[roomId] = {
     ...roomConfig[roomId],
     isDiscovered: roomId == startingRoom,
+    isKnown: false,
     isExplored: false,
     currentProgress: 0,
     remainingItems: [],
@@ -41,7 +44,7 @@ Object.keys(roomConfig)
 export function ExplorationProvider(props: Record<string, any>) {
   const [isExploring, setIsExploring] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
+  const [selectedRoom, setSelectedRoom] = useState<string>("");
   const [rooms, setRooms] = useState<Record<string, Room>>(defaultRooms);
 
   function startExploring(room: Room) {
@@ -49,7 +52,20 @@ export function ExplorationProvider(props: Record<string, any>) {
     setIsExploring(true);
   }
 
-  function stopExploring(room: RoomConfig) {
+  function stopExploring(room: Room) {
+    setIsExploring(false);
+  }
+
+  function completeExploring(room: Room) {
+    rooms[room.id] = {
+      ...room,
+      isExplored: true,
+    };
+    room.connectedRooms.forEach((roomId) => rooms[roomId] = {
+      ...rooms[roomId],
+      isDiscovered: true,
+    });
+    setRooms(rooms);
     setIsExploring(false);
   }
 
@@ -63,6 +79,7 @@ export function ExplorationProvider(props: Record<string, any>) {
         startExploring,
         updateProgress: setProgress,
         stopExploring,
+        completeExploring,
         setSelectedRoom,
       }}
       {...props}

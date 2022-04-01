@@ -42,7 +42,9 @@ mapData.levels.forEach((level) => {
         const type: ItemType = ItemType[i];
         itemsByType.set(i, (itemsByType.get(i) ?? 0) + 1);
       });
-      rooms[getEntityField(entity, "id")] = {
+      const roomId = getEntityField(entity, "id");
+      rooms[roomId] = {
+        id: roomId,
         x: entity.px[0],
         y: entity.px[1],
         width: entity.width,
