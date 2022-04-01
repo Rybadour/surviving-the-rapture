@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { createContext, useState } from "react";
 
-import rooms from "../config/exploration";
-import { RoomConfig } from "../shared/types";
+import roomConfig from "../config/exploration";
+import { Room, RoomConfig } from "../shared/types";
 
 export type ExplorationContext = {
   isExploring: boolean;
   progress: number;
-  rooms: Record<string, RoomConfig>;
-  selectedRoom: RoomConfig | null;
-  startExploring: () => void;
+  rooms: Record<string, Room>;
+  selectedRoom: Room | null;
+  startExploring: (room: Room) => void;
   updateProgress: (progress: number) => void;
-  stopExploring: (room: RoomConfig) => void;
-  setSelectedRoom: (room: RoomConfig) => void;
+  stopExploring: (room: Room) => void;
+  setSelectedRoom: (room: Room) => void;
 };
 
 const defaultContext: ExplorationContext = {
@@ -20,19 +20,31 @@ const defaultContext: ExplorationContext = {
   progress: 0,
   rooms: {},
   selectedRoom: null,
-  startExploring: () => {},
+  startExploring: (room: Room) => {},
   updateProgress: (progress: number) => {},
-  stopExploring: (room: RoomConfig) => {},
-  setSelectedRoom: (room: RoomConfig) => {},
+  stopExploring: (room: Room) => {},
+  setSelectedRoom: (room: Room) => {},
 };
 export const ExplorationContext = createContext(defaultContext);
+
+const startingRoom = "garage";
+const defaultRooms: Record<string, Room> = {};
+Object.keys(roomConfig)
+  .forEach((roomId) => defaultRooms[roomId] = {
+    ...roomConfig[roomId],
+    isDiscovered: roomId == startingRoom,
+    isExplored: false,
+    currentProgress: 0,
+    remainingItems: [],
+  })
 
 export function ExplorationProvider(props: Record<string, any>) {
   const [isExploring, setIsExploring] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [selectedRoom, setSelectedRoom] = useState<RoomConfig | null>(null);
+  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
+  const [rooms, setRooms] = useState<Record<string, Room>>(defaultRooms);
 
-  function startExploring() {
+  function startExploring(room: Room) {
     setProgress(0);
     setIsExploring(true);
   }

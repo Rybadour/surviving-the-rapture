@@ -1,34 +1,5 @@
 import { ItemType, RoomConfig } from "../shared/types";
-
-/* *
-const rooms: Record<string, RoomConfig> = {
-  garage: {
-    name: "Garage",
-    x: 32,
-    y: 32,
-    width: 100,
-    height: 200,
-    loot: new Map([
-      [ItemType.Wires, 4],
-      [ItemType.MachineParts, 2],
-    ]),
-  },
-  hallway1: {
-    name: "",
-    x: 64,
-    y: 20,
-    width: 200,
-    height: 10,
-    loot: new Map([
-      [ItemType.Wires, 1],
-      [ItemType.LightBulb, 1],
-    ]),
-  },
-};
-/* */
-
 import mapData from "../../public/Map1Test.json";
-import { LOOP_TYPES } from "@babel/types";
 
 type LDTKEntityInstance = {
   iid: string;
@@ -43,9 +14,22 @@ type LDTKEntityInstance = {
   }[];
 };
 
+type LDTKEntityLayer = {
+  entityInstances: LDTKEntityInstance[];
+}
+
+type LDTKEntityReference = {
+  entityIid: string;
+}
+
 function getEntityField(entity: LDTKEntityInstance, fieldName: string) {
   const field = entity.fieldInstances.filter((fi) => fi.__identifier == fieldName);
   return field.length > 0 ? field[0].__value : "";
+}
+
+function getRoomIdFromRef(refId: string, layer: LDTKEntityLayer) {
+  const found = layer.entityInstances.find(entity => entity.iid == refId);
+  return (found ? getEntityField(found, "id") : "");
 }
 
 const rooms: Record<string, RoomConfig> = {};
@@ -65,7 +49,9 @@ mapData.levels.forEach((level) => {
         height: entity.height,
         name: getEntityField(entity, "name"),
         loot: itemsByType,
-        explorationTime: 100,
+        explorationTime: getEntityField(entity, "exploreTime"),
+        connectedRooms: getEntityField(entity, "connectedRooms")
+          .map((ref: LDTKEntityReference) => getRoomIdFromRef(ref.entityIid, layer))
       };
     });
   });

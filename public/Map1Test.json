@@ -10,7 +10,7 @@
 	},
 	"jsonVersion": "1.0.0",
 	"appBuildId": 457931,
-	"nextUid": 9,
+	"nextUid": 12,
 	"identifierStyle": "Capitalize",
 	"worldLayout": "Free",
 	"worldGridWidth": 256,
@@ -174,6 +174,64 @@
 					"allowedRefs": "OnlySame",
 					"allowedRefTags": [],
 					"tilesetUid": null
+				},
+				{
+					"identifier": "exploreTime",
+					"__type": "Int",
+					"uid": 9,
+					"type": "F_Int",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": { "id": "V_Int", "params": [10] },
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "connectedRooms",
+					"__type": "Array<EntityRef>",
+					"uid": 11,
+					"type": "F_EntityRef",
+					"isArray": true,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "RefLinkBetweenCenters",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
 				}
 			]
 		}
@@ -245,31 +303,17 @@
 									"id": "V_String",
 									"params": ["Hallway"]
 								}] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] }
-							]
-						},
-						{
-							"__identifier": "Room",
-							"__grid": [9,16],
-							"__pivot": [0,0],
-							"__tags": ["region"],
-							"__tile": null,
-							"__smartColor": "#94D9B3",
-							"iid": "de8903a0-8dc0-11ec-8e38-9f8b5da79dc2",
-							"width": 16,
-							"height": 16,
-							"defUid": 3,
-							"px": [72,128],
-							"fieldInstances": [
-								{ "__identifier": "id", "__value": "c2", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "exploreTime", "__value": 15, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [15] }] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["c2"]
-								}] },
-								{ "__identifier": "name", "__value": "Closet", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["Closet"]
-								}] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] }
+									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
+								}] }
 							]
 						},
 						{
@@ -280,8 +324,8 @@
 							"__tile": null,
 							"__smartColor": "#94D9B3",
 							"iid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
-							"width": 48,
-							"height": 104,
+							"width": 72,
+							"height": 168,
 							"defUid": 3,
 							"px": [24,64],
 							"fieldInstances": [
@@ -302,12 +346,51 @@
 								}, {
 									"id": "V_String",
 									"params": ["ScrapMetal"]
+								} ] },
+								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
+								{ "__identifier": "connectedRooms", "__value": [
+									{
+										"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+									},
+									{
+										"entityIid": "2a5bdf50-8dc0-11ec-8e38-e97afd1e5e72",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+									},
+									{
+										"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+									},
+									{
+										"entityIid": "c5806350-8dc0-11ec-afe1-8f7ffd83a499",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["849c1ed0-8dc0-11ec-8e38-6f5781e5374c"]
+								}, {
+									"id": "V_String",
+									"params": ["2a5bdf50-8dc0-11ec-8e38-e97afd1e5e72"]
+								}, {
+									"id": "V_String",
+									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
+								}, {
+									"id": "V_String",
+									"params": ["c5806350-8dc0-11ec-afe1-8f7ffd83a499"]
 								} ] }
 							]
 						},
 						{
 							"__identifier": "Room",
-							"__grid": [9,11],
+							"__grid": [12,20],
 							"__pivot": [0,0],
 							"__tags": ["region"],
 							"__tile": null,
@@ -316,7 +399,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 3,
-							"px": [72,88],
+							"px": [96,160],
 							"fieldInstances": [
 								{ "__identifier": "id", "__value": "c1", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
 									"id": "V_String",
@@ -326,12 +409,14 @@
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] }
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] }
 							]
 						},
 						{
 							"__identifier": "Room",
-							"__grid": [5,21],
+							"__grid": [6,29],
 							"__pivot": [0,0],
 							"__tags": ["region"],
 							"__tile": null,
@@ -340,7 +425,7 @@
 							"width": 16,
 							"height": 40,
 							"defUid": 3,
-							"px": [40,168],
+							"px": [48,232],
 							"fieldInstances": [
 								{ "__identifier": "id", "__value": "hw1", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
 									"id": "V_String",
@@ -356,21 +441,39 @@
 								}, {
 									"id": "V_String",
 									"params": ["ScrapMetal"]
+								} ] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+								}, {
+									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
+								}, {
+									"id": "V_String",
+									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
 								} ] }
 							]
 						},
 						{
 							"__identifier": "Room",
-							"__grid": [5,26],
+							"__grid": [5,34],
 							"__pivot": [0,0],
 							"__tags": ["region"],
 							"__tile": null,
 							"__smartColor": "#94D9B3",
 							"iid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
-							"width": 56,
-							"height": 48,
+							"width": 104,
+							"height": 96,
 							"defUid": 3,
-							"px": [40,208],
+							"px": [40,272],
 							"fieldInstances": [
 								{ "__identifier": "id", "__value": "workshop", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
 									"id": "V_String",
@@ -389,12 +492,30 @@
 								}, {
 									"id": "V_String",
 									"params": ["ScrapMetal"]
+								} ] },
+								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "809742f0-8dc0-11ec-8e38-e7b7387010c4",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+								}, {
+									"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["809742f0-8dc0-11ec-8e38-e7b7387010c4"]
+								}, {
+									"id": "V_String",
+									"params": ["849c1ed0-8dc0-11ec-8e38-6f5781e5374c"]
 								} ] }
 							]
 						},
 						{
 							"__identifier": "Room",
-							"__grid": [9,24],
+							"__grid": [14,32],
 							"__pivot": [0,0],
 							"__tags": ["region"],
 							"__tile": null,
@@ -403,7 +524,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 3,
-							"px": [72,192],
+							"px": [112,256],
 							"fieldInstances": [
 								{ "__identifier": "id", "__value": "c3", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
 									"id": "V_String",
@@ -419,7 +540,49 @@
 								}, {
 									"id": "V_String",
 									"params": ["ScrapMetal"]
-								} ] }
+								} ] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [12,25],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c5806350-8dc0-11ec-afe1-8f7ffd83a499",
+							"width": 16,
+							"height": 16,
+							"defUid": 3,
+							"px": [96,200],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": "c2", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["c2"]
+								}] },
+								{ "__identifier": "name", "__value": "Closet", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Closet"]
+								}] },
+								{ "__identifier": "items", "__value": [ "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["Wires"]
+								}, {
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								} ] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
+								}] }
 							]
 						}
 					]

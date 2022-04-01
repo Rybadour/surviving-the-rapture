@@ -19,4 +19,12 @@ export type RoomConfig = {
   height: number;
   loot: ItemsByType;
   explorationTime: number;
+  connectedRooms: string[];
+};
+
+export type Room = RoomConfig & {
+  isDiscovered: boolean;
+  isExplored: boolean;
+  currentProgress: number;
+  remainingItems: ItemType[];
 };

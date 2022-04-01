@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { ExplorationContext } from "../../contexts/exploration";
 import { InventoryContext } from "../../contexts/inventory";
 import { startExploring } from "../../game-logic/exploration";
-import { RoomConfig } from "../../shared/types";
+import { Room, RoomConfig } from "../../shared/types";
 import { range } from "../../shared/utils";
 import './exploration.css';
 
@@ -12,12 +12,12 @@ export function Exploration() {
   const exploration = useContext(ExplorationContext);
   const inventory = useContext(InventoryContext);
 
-  const onExplore = useCallback(async (room: RoomConfig | null) => {
+  const onExplore = useCallback(async (room: Room | null) => {
     if (!room) return;
     await startExploring(inventory, exploration, room);
   }, [exploration, inventory]);
 
-  const onSelectRoom = useCallback((room: RoomConfig) => {
+  const onSelectRoom = useCallback((room: Room) => {
     exploration.setSelectedRoom(room);
   }, [exploration]);
 
@@ -25,7 +25,9 @@ export function Exploration() {
     <h2>Exploration</h2>
     <div className="exploration-container">
       <div className="map">
-          {Object.entries(exploration.rooms).map(([r, room]) => (
+          {Object.entries(exploration.rooms)
+          .filter(([r, room]) => room.isDiscovered)
+          .map(([r, room]) => (
             <div
               className={classNames('room', {selected: exploration.selectedRoom == room})}
               key={r}
