@@ -30,7 +30,8 @@ function getEntityField(entity: LDTKEntityInstance, fieldName: string) {
 
 function getRoomIdFromRef(refId: string, layer: LDTKEntityLayer) {
   const found = layer.entityInstances.find(entity => entity.iid == refId);
-  return (found ? getEntityField(found, "id") : "");
+  const entityId = (found ? getEntityField(found, "id") : "");
+  return entityId ? entityId : refId;
 }
 
 const rooms: Record<string, RoomConfig> = {};
@@ -45,7 +46,10 @@ mapData.levels.forEach((level) => {
         const type: ItemType = ItemType[i];
         itemsByType.set(i, (itemsByType.get(i) ?? 0) + 1);
       });
-      const roomId = getEntityField(entity, "id");
+      let roomId = getEntityField(entity, "id");
+      if (!roomId) {
+        roomId = entity.iid;
+      }
       rooms[roomId] = {
         id: roomId,
         x: entity.px[0],
