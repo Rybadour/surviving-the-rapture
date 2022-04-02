@@ -5,12 +5,12 @@
 		"doc": "https://ldtk.io/json",
 		"schema": "https://ldtk.io/files/JSON_SCHEMA.json",
 		"appAuthor": "Sebastien 'deepnight' Benard",
-		"appVersion": "1.0.0",
+		"appVersion": "1.1.0",
 		"url": "https://ldtk.io"
 	},
-	"jsonVersion": "1.0.0",
-	"appBuildId": 457931,
-	"nextUid": 12,
+	"jsonVersion": "1.1.0",
+	"appBuildId": 458005,
+	"nextUid": 22,
 	"identifierStyle": "Capitalize",
 	"worldLayout": "Free",
 	"worldGridWidth": 256,
@@ -25,6 +25,7 @@
 	"minifyJson": false,
 	"externalLevels": false,
 	"exportTiled": false,
+	"simplifiedExport": false,
 	"imageExportMode": "None",
 	"pngFilePattern": null,
 	"backupOnSave": false,
@@ -73,10 +74,10 @@
 			"tileOpacity": 0.25,
 			"fillOpacity": 0.15,
 			"lineOpacity": 1,
-			"hollow": true,
+			"hollow": false,
 			"color": "#94D9B3",
 			"renderMode": "Rectangle",
-			"showName": true,
+			"showName": false,
 			"tilesetId": null,
 			"tileId": null,
 			"tileRenderMode": "FitInside",
@@ -226,6 +227,209 @@
 					"acceptFileTypes": null,
 					"defaultOverride": null,
 					"textLanguageMode": null,
+					"symmetricalRef": true,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "hasLighting",
+					"__type": "Bool",
+					"uid": 12,
+					"type": "F_Bool",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "feature",
+					"__type": "LocalEnum.RoomFeatures",
+					"uid": 14,
+					"type": "F_Enum(13)",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "capacityItems",
+					"__type": "Array<EntityRef>",
+					"uid": 18,
+					"type": "F_EntityRef",
+					"isArray": true,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlyTags",
+					"allowedRefTags": ["Item"],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "unlockPowerRequired",
+					"__type": "Int",
+					"uid": 21,
+					"type": "F_Int",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": { "id": "V_Int", "params": [100] },
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
+		},
+		{
+			"identifier": "ItemWithCapacity",
+			"uid": 15,
+			"tags": ["Item"],
+			"width": 2,
+			"height": 2,
+			"resizableX": false,
+			"resizableY": false,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#D994D5",
+			"renderMode": "Rectangle",
+			"showName": false,
+			"tilesetId": null,
+			"tileId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": [
+				{
+					"identifier": "ItemType",
+					"__type": "LocalEnum.Items",
+					"uid": 16,
+					"type": "F_Enum(4)",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "Capacity",
+					"__type": "Int",
+					"uid": 17,
+					"type": "F_Int",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
 					"symmetricalRef": false,
 					"autoChainRef": true,
 					"allowOutOfLevelRef": true,
@@ -235,10 +439,32 @@
 				}
 			]
 		}
-	], "tilesets": [], "enums": [{ "identifier": "Items", "uid": 4, "values": [ { "id": "Wires", "tileId": null, "color": 0, "__tileSrcRect": null }, { "id": "ScrapMetal", "tileId": null, "color": 0, "__tileSrcRect": null } ], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }], "externalEnums": [], "levelFields": [] },
+	], "tilesets": [], "enums": [
+		{ "identifier": "Items", "uid": 4, "values": [
+			{ "id": "Battery", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "BrokenFlashlight", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "CPU", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "GasCan", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "LightBulb", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "MachineParts", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "MicroController", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "Motor", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "RechargeableBattery", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "RubberHose", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "ScrapElectronics", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "ScrapMetal", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "Wires", "tileId": null, "color": 0, "__tileSrcRect": null }
+		], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
+		{ "identifier": "RoomFeatures", "uid": 13, "values": [
+			{ "id": "BackupGenerator", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "Workbench", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "Trucks", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "Elevator", "tileId": null, "color": 0, "__tileSrcRect": null }
+		], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }
+	], "externalEnums": [], "levelFields": [] },
 	"levels": [
 		{
-			"identifier": "World_Level_0",
+			"identifier": "Basement",
 			"iid": "de886760-8dc0-11ec-8e38-15983283e52d",
 			"uid": 0,
 			"worldX": 0,
@@ -248,7 +474,7 @@
 			"pxHei": 840,
 			"__bgColor": "#696A79",
 			"bgColor": null,
-			"useAutoIdentifier": true,
+			"useAutoIdentifier": false,
 			"bgRelPath": null,
 			"bgPos": null,
 			"bgPivotX": 0.5,
@@ -290,30 +516,42 @@
 							"__tile": null,
 							"__smartColor": "#94D9B3",
 							"iid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
-							"width": 160,
+							"width": 256,
 							"height": 16,
 							"defUid": 3,
 							"px": [48,48],
 							"fieldInstances": [
-								{ "__identifier": "id", "__value": "hw2", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["hw2"]
-								}] },
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [null] },
 								{ "__identifier": "name", "__value": "Hallway", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Hallway"]
 								}] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 15, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [15] }] },
-								{ "__identifier": "connectedRooms", "__value": [{
+								{ "__identifier": "connectedRooms", "__value": [ {
 									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
-								}] }
+								}, {
+									"id": "V_String",
+									"params": ["a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
 							]
 						},
 						{
@@ -329,17 +567,21 @@
 							"defUid": 3,
 							"px": [72,128],
 							"fieldInstances": [
-								{ "__identifier": "id", "__value": "c2", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["c2"]
-								}] },
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [null] },
 								{ "__identifier": "name", "__value": "Closet", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": ["ScrapMetal"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								}] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
-								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] }
+								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
 							]
 						},
 						{
@@ -363,7 +605,7 @@
 									"id": "V_String",
 									"params": ["Garage"]
 								}] },
-								{ "__identifier": "items", "__value": [ "Wires", "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
+								{ "__identifier": "items", "__value": [ "Wires", "Wires", "ScrapMetal", "MachineParts" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["Wires"]
 								}, {
@@ -372,6 +614,9 @@
 								}, {
 									"id": "V_String",
 									"params": ["ScrapMetal"]
+								}, {
+									"id": "V_String",
+									"params": ["MachineParts"]
 								} ] },
 								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
 								{ "__identifier": "connectedRooms", "__value": [
@@ -379,25 +624,25 @@
 										"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
 									},
 									{
 										"entityIid": "de8903a0-8dc0-11ec-8e38-9f8b5da79dc2",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
 									},
 									{
 										"entityIid": "2a5bdf50-8dc0-11ec-8e38-e97afd1e5e72",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
 									},
 									{
 										"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
@@ -411,12 +656,22 @@
 								}, {
 									"id": "V_String",
 									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
-								} ] }
+								} ] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": "Trucks", "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Trucks"]
+								}] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
 							]
 						},
 						{
 							"__identifier": "Room",
-							"__grid": [9,11],
+							"__grid": [9,10],
 							"__pivot": [0,0],
 							"__tags": ["region"],
 							"__tile": null,
@@ -425,19 +680,20 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 3,
-							"px": [72,88],
+							"px": [72,80],
 							"fieldInstances": [
-								{ "__identifier": "id", "__value": "c1", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["c1"]
-								}] },
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [null] },
 								{ "__identifier": "name", "__value": "Closet", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
-								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] }
+								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
 							]
 						},
 						{
@@ -453,10 +709,7 @@
 							"defUid": 3,
 							"px": [40,168],
 							"fieldInstances": [
-								{ "__identifier": "id", "__value": "hw1", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["hw1"]
-								}] },
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [null] },
 								{ "__identifier": "name", "__value": "Hallway", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Hallway"]
@@ -473,19 +726,26 @@
 									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
 								}, {
 									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
 								}, {
 									"id": "V_String",
 									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
-								} ] }
+								} ] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
 							]
 						},
 						{
@@ -509,34 +769,67 @@
 									"id": "V_String",
 									"params": ["Workshop"]
 								}] },
-								{ "__identifier": "items", "__value": [ "Wires", "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
-									"id": "V_String",
-									"params": ["Wires"]
-								}, {
-									"id": "V_String",
-									"params": ["Wires"]
-								}, {
-									"id": "V_String",
-									"params": ["ScrapMetal"]
-								} ] },
+								{ "__identifier": "items", "__value": [
+									"Wires",
+									"Wires",
+									"ScrapMetal",
+									"ScrapElectronics",
+									"ScrapMetal",
+									"ScrapElectronics"
+								], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapElectronics"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapElectronics"]
+									}
+								] },
 								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
 								{ "__identifier": "connectedRooms", "__value": [ {
-									"entityIid": "809742f0-8dc0-11ec-8e38-e7b7387010c4",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
-								}, {
 									"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "8318dd20-8dc0-11ec-afe1-eb18b1fba5bf"
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
-									"params": ["809742f0-8dc0-11ec-8e38-e7b7387010c4"]
+									"params": ["849c1ed0-8dc0-11ec-8e38-6f5781e5374c"]
 								}, {
 									"id": "V_String",
-									"params": ["849c1ed0-8dc0-11ec-8e38-6f5781e5374c"]
-								} ] }
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ false ]
+								}] },
+								{ "__identifier": "feature", "__value": "Workbench", "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Workbench"]
+								}] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
 							]
 						},
 						{
@@ -552,23 +845,763 @@
 							"defUid": 3,
 							"px": [72,192],
 							"fieldInstances": [
-								{ "__identifier": "id", "__value": "c3", "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["c3"]
-								}] },
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [null] },
 								{ "__identifier": "name", "__value": "Closet", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
-								{ "__identifier": "items", "__value": [ "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
+								{ "__identifier": "items", "__value": [ "Wires", "BrokenFlashlight" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["Wires"]
+								}, {
+									"id": "V_String",
+									"params": ["BrokenFlashlight"]
+								} ] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [12,27],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+							"width": 208,
+							"height": 16,
+							"defUid": 3,
+							"px": [96,216],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Hallway", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Hallway"]
+								}] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "exploreTime", "__value": 20, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [20] }] },
+								{ "__identifier": "connectedRooms", "__value": [
+									{
+										"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									},
+									{
+										"entityIid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									},
+									{
+										"entityIid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									},
+									{
+										"entityIid": "aaf22380-8dc0-11ec-896a-630ce1fb8c0d",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									},
+									{
+										"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
+									},
+									{
+										"id": "V_String",
+										"params": ["5ad1ab80-8dc0-11ec-8d05-6d8380a85712"]
+									},
+									{
+										"id": "V_String",
+										"params": ["bdaa22f0-8dc0-11ec-8d05-7989e15605de"]
+									},
+									{
+										"id": "V_String",
+										"params": ["aaf22380-8dc0-11ec-896a-630ce1fb8c0d"]
+									},
+									{
+										"id": "V_String",
+										"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
+									}
+								] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [{
+									"entityIid": "b17dc390-8dc0-11ec-8d05-3d19f1410a23",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["b17dc390-8dc0-11ec-8d05-3d19f1410a23"]
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [23,19],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
+							"width": 16,
+							"height": 64,
+							"defUid": 3,
+							"px": [184,152],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Hallway", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Hallway"]
+								}] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "61905ac0-8dc0-11ec-8d05-8b338850f6f6",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								}, {
+									"id": "V_String",
+									"params": ["61905ac0-8dc0-11ec-8d05-8b338850f6f6"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [18,11],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "61905ac0-8dc0-11ec-8d05-8b338850f6f6",
+							"width": 96,
+							"height": 64,
+							"defUid": 3,
+							"px": [144,88],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Storage Room", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Storage Room"]
+								}] },
+								{ "__identifier": "items", "__value": [
+									"Battery",
+									"Battery",
+									"RechargeableBattery",
+									"RubberHose",
+									"ScrapElectronics",
+									"ScrapElectronics",
+									"ScrapElectronics",
+									"MachineParts",
+									"MachineParts",
+									"LightBulb",
+									"LightBulb",
+									"Wires",
+									"Wires",
+									"Wires",
+									"Wires",
+									"ScrapMetal",
+									"ScrapMetal"
+								], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["Battery"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Battery"]
+									},
+									{
+										"id": "V_String",
+										"params": ["RechargeableBattery"]
+									},
+									{
+										"id": "V_String",
+										"params": ["RubberHose"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapElectronics"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapElectronics"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapElectronics"]
+									},
+									{
+										"id": "V_String",
+										"params": ["MachineParts"]
+									},
+									{
+										"id": "V_String",
+										"params": ["MachineParts"]
+									},
+									{
+										"id": "V_String",
+										"params": ["LightBulb"]
+									},
+									{
+										"id": "V_String",
+										"params": ["LightBulb"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									}
+								] },
+								{ "__identifier": "exploreTime", "__value": 50, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [50] }] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["5ad1ab80-8dc0-11ec-8d05-6d8380a85712"]
+								}] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [12,4],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f",
+							"width": 16,
+							"height": 16,
+							"defUid": 3,
+							"px": [96,32],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Closet", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Closet"]
+								}] },
+								{ "__identifier": "items", "__value": ["LightBulb"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["LightBulb"]
+								}] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
+								}] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [33,29],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
+							"width": 16,
+							"height": 56,
+							"defUid": 3,
+							"px": [264,232],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": null, "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								}, {
+									"id": "V_String",
+									"params": ["c03adff0-8dc0-11ec-8d05-73ee068e5469"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [30,36],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
+							"width": 64,
+							"height": 40,
+							"defUid": 3,
+							"px": [240,288],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Backup Generator", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Backup Generator"]
+								}] },
+								{ "__identifier": "items", "__value": [ "LightBulb", "MachineParts", "ScrapMetal", "ScrapMetal", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["LightBulb"]
+									},
+									{
+										"id": "V_String",
+										"params": ["MachineParts"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									}
+								] },
+								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "2b392a00-8dc0-11ec-8d05-d335ccfd65a9",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["2b392a00-8dc0-11ec-8d05-d335ccfd65a9"]
+								}, {
+									"id": "V_String",
+									"params": ["bdaa22f0-8dc0-11ec-8d05-7989e15605de"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": "BackupGenerator", "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["BackupGenerator"]
+								}] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [28,37],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "2b392a00-8dc0-11ec-8d05-d335ccfd65a9",
+							"width": 16,
+							"height": 16,
+							"defUid": 3,
+							"px": [224,296],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Closet", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Closet"]
+								}] },
+								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Wires"]
+								}] },
+								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["c03adff0-8dc0-11ec-8d05-73ee068e5469"]
+								}] },
+								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [{
+									"entityIid": "83aca350-8dc0-11ec-8d05-2b538dd2f748",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["83aca350-8dc0-11ec-8d05-2b538dd2f748"]
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "ItemWithCapacity",
+							"__grid": [26,37],
+							"__pivot": [0,0],
+							"__tags": ["Item"],
+							"__tile": null,
+							"__smartColor": "#D994D5",
+							"iid": "83aca350-8dc0-11ec-8d05-2b538dd2f748",
+							"width": 2,
+							"height": 2,
+							"defUid": 15,
+							"px": [208,296],
+							"fieldInstances": [
+								{ "__identifier": "ItemType", "__value": "GasCan", "__type": "LocalEnum.Items", "__tile": null, "defUid": 16, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["GasCan"]
+								}] },
+								{ "__identifier": "Capacity", "__value": 0, "__type": "Int", "__tile": null, "defUid": 17, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "ItemWithCapacity",
+							"__grid": [21,30],
+							"__pivot": [0,0],
+							"__tags": ["Item"],
+							"__tile": null,
+							"__smartColor": "#D994D5",
+							"iid": "b17dc390-8dc0-11ec-8d05-3d19f1410a23",
+							"width": 2,
+							"height": 2,
+							"defUid": 15,
+							"px": [168,240],
+							"fieldInstances": [
+								{ "__identifier": "ItemType", "__value": "Battery", "__type": "LocalEnum.Items", "__tile": null, "defUid": 16, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Battery"]
+								}] },
+								{ "__identifier": "Capacity", "__value": 10, "__type": "Int", "__tile": null, "defUid": 17, "realEditorValues": [{ "id": "V_Int", "params": [10] }] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [31,23],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "aaf22380-8dc0-11ec-896a-630ce1fb8c0d",
+							"width": 16,
+							"height": 32,
+							"defUid": 3,
+							"px": [248,184],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Stairwell", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Stairwell"]
+								}] },
+								{ "__identifier": "items", "__value": [ "LightBulb", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["LightBulb"]
 								}, {
 									"id": "V_String",
 									"params": ["ScrapMetal"]
 								} ] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
-								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] }
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								}] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [36,8],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
+							"width": 16,
+							"height": 152,
+							"defUid": 3,
+							"px": [288,64],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Elevator Lobby", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Elevator Lobby"]
+								}] },
+								{ "__identifier": "items", "__value": [ "Battery", "ScrapMetal", "ScrapElectronics", "Wires", "Wires" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["Battery"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapMetal"]
+									},
+									{
+										"id": "V_String",
+										"params": ["ScrapElectronics"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									},
+									{
+										"id": "V_String",
+										"params": ["Wires"]
+									}
+								] },
+								{ "__identifier": "exploreTime", "__value": 20, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [20] }] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["c517b630-8dc0-11ec-896a-399b52ab3f9a"]
+								}, {
+									"id": "V_String",
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [34,12],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
+							"width": 16,
+							"height": 16,
+							"defUid": 3,
+							"px": [272,96],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Elevator 3", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Elevator 3"]
+								}] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
+								}, {
+									"id": "V_String",
+									"params": ["c5eabda0-8dc0-11ec-896a-6d255bb6e585"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": "Elevator", "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Elevator"]
+								}] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [34,15],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
+							"width": 16,
+							"height": 16,
+							"defUid": 3,
+							"px": [272,120],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Elevator 2", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Elevator 2"]
+								}] },
+								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Wires"]
+								}] },
+								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
+								{ "__identifier": "connectedRooms", "__value": [ {
+									"entityIid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}, {
+									"entityIid": "c68ffe50-8dc0-11ec-896a-0d6bc3a5c040",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["c517b630-8dc0-11ec-896a-399b52ab3f9a"]
+								}, {
+									"id": "V_String",
+									"params": ["c68ffe50-8dc0-11ec-896a-0d6bc3a5c040"]
+								} ] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": "Elevator", "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Elevator"]
+								}] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Room",
+							"__grid": [34,18],
+							"__pivot": [0,0],
+							"__tags": ["region"],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"iid": "c68ffe50-8dc0-11ec-896a-0d6bc3a5c040",
+							"width": 16,
+							"height": 16,
+							"defUid": 3,
+							"px": [272,144],
+							"fieldInstances": [
+								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Elevator 1", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Elevator 1"]
+								}] },
+								{ "__identifier": "items", "__value": ["ScrapMetal"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								}] },
+								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["c5eabda0-8dc0-11ec-896a-6d255bb6e585"]
+								}] },
+								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__value": "Elevator", "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Elevator"]
+								}] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
 							]
 						}
 					]

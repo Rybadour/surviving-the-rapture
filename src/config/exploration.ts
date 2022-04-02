@@ -2,6 +2,7 @@ import { ItemType, RoomConfig } from "../shared/types";
 import mapData from "../../public/Map1Test.json";
 
 type LDTKEntityInstance = {
+  __identifier: string;
   iid: string;
   width: number;
   height: number;
@@ -35,7 +36,9 @@ function getRoomIdFromRef(refId: string, layer: LDTKEntityLayer) {
 const rooms: Record<string, RoomConfig> = {};
 mapData.levels.forEach((level) => {
   level.layerInstances.forEach((layer) => {
-    layer.entityInstances.forEach((entity) => {
+    layer.entityInstances
+      .filter(entity => entity.__identifier == "Room")
+      .forEach((entity) => {
       const items: string[] = getEntityField(entity, "items");
       const itemsByType: Map<ItemType, number> = new Map();
       items.forEach((i) => {

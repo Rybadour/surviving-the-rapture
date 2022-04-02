@@ -36,7 +36,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  border: 2px solid #BBB;
   border-radius: 3px;
   cursor: pointer;
   padding: 5px;
@@ -45,6 +45,9 @@ h2 {
 }
 .room.selected {
   box-shadow: 0px 0px 10px 2px white;
+}
+.room.explored {
+  background-color: #44657a;
 }
 
 .room-details {

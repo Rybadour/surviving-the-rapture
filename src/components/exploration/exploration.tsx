@@ -30,7 +30,11 @@ export function Exploration() {
           .filter(([r, room]) => room.isDiscovered)
           .map(([r, room]) => (
             <div
-              className={classNames('room', {selected: exploration.selectedRoom == room.id})}
+              className={classNames('room', {
+                selected: exploration.selectedRoom == room.id,
+                explored: room.isExplored,
+                known: room.isKnown,
+              })}
               key={r}
               onClick={() => onSelectRoom(room)}
               style={{

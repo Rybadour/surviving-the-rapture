@@ -1,14 +1,19 @@
 import { ItemsByType } from "../contexts/inventory";
 
 export enum ItemType {
-  Wires = "Wires",
-  MachineParts = "MachineParts",
-  ScrapElectronics = "ScrapElectronics",
-  ScrapMetal = "ScrapMetal",
+  Battery = "Battery",
+  BrokenFlashlight = "BrokenFlashlight",
   CPU = "CPU",
+  GasCan = "GasCan",
+  LightBulb = "LightBulb",
+  MachineParts = "MachineParts",
   MicroController = "MicroController",
   Motor = "Motor",
-  LightBulb = "LightBulb",
+  RechargeableBattery = "RechargeableBattery",
+  RubberHose = "RubberHose",
+  ScrapElectronics = "ScrapElectronics",
+  ScrapMetal = "ScrapMetal",
+  Wires = "Wires",
 }
 
 export type RoomConfig = {
