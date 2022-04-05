@@ -26,6 +26,7 @@ export type RoomConfig = {
   loot: ItemsByType;
   explorationTime: number;
   connectedRooms: string[];
+  hasLighting: boolean;
 };
 
 export type Room = RoomConfig & {

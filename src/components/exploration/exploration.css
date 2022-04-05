@@ -49,11 +49,27 @@ h2 {
 .room.explored {
   background-color: #44657a;
 }
+.room.small-room .label {
+  display: none;
+}
+.room.small-room .unlit-icon {
+  display: none;
+}
+.room.unlit {
+  background: repeating-linear-gradient(
+    45deg,
+    #666,
+    #666 5px,
+    #333 5px,
+    #333 10px
+  );
+}
 
 .room-details {
   flex: 1;
   margin-left: 30px;
   width: auto;
+  text-align: left;
 }
 
 .space {

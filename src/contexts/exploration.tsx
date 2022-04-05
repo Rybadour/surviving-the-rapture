@@ -31,15 +31,16 @@ export const ExplorationContext = createContext(defaultContext);
 
 const startingRoom = "garage";
 const defaultRooms: Record<string, Room> = {};
-Object.keys(roomConfig)
-  .forEach((roomId) => defaultRooms[roomId] = {
+Object.keys(roomConfig).forEach((roomId) => {
+  defaultRooms[roomId] = {
     ...roomConfig[roomId],
     isDiscovered: roomId == startingRoom,
     isKnown: false,
     isExplored: false,
     currentProgress: 0,
     remainingItems: [],
-  })
+  };
+});
 
 export function ExplorationProvider(props: Record<string, any>) {
   const [isExploring, setIsExploring] = useState(false);
@@ -61,9 +62,11 @@ export function ExplorationProvider(props: Record<string, any>) {
       ...room,
       isExplored: true,
     };
-    room.connectedRooms.forEach((roomId) => rooms[roomId] = {
-      ...rooms[roomId],
-      isDiscovered: true,
+    room.connectedRooms.forEach((roomId) => {
+      rooms[roomId] = {
+        ...rooms[roomId],
+        isDiscovered: true,
+      };
     });
     setRooms(rooms);
     setIsExploring(false);
