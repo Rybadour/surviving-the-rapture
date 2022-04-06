@@ -28,6 +28,14 @@ function getEntityField(entity: LDTKEntityInstance, fieldName: string) {
   return field.length > 0 ? field[0].__value : "";
 }
 
+function getFields(entity: LDTKEntityInstance) {
+  const fields: Record<string, any> = {};
+  entity.fieldInstances.forEach((field) => {
+    fields[field.__identifier] = field.__value;
+  });
+  return fields;
+}
+
 function getRoomIdFromRef(refId: string, layer: LDTKEntityLayer) {
   const found = layer.entityInstances.find(entity => entity.iid == refId);
   const entityId = (found ? getEntityField(found, "id") : "");
@@ -40,13 +48,13 @@ mapData.levels.forEach((level) => {
     layer.entityInstances
       .filter((entity) => entity.__identifier == "Room")
       .forEach((entity) => {
-        const items: string[] = getEntityField(entity, "items");
+        const fields = getFields(entity);
         const itemsByType: Map<ItemType, number> = new Map();
-        items.forEach((i) => {
+        fields.items.forEach((i: string) => {
           const type: ItemType = ItemType[i];
           itemsByType.set(i, (itemsByType.get(i) ?? 0) + 1);
         });
-        let roomId = getEntityField(entity, "id");
+        let roomId = fields.id;
         if (!roomId) {
           roomId = entity.iid;
         }
@@ -56,16 +64,16 @@ mapData.levels.forEach((level) => {
           y: entity.px[1],
           width: entity.width,
           height: entity.height,
-          name: getEntityField(entity, "name"),
-          mapLabel: getEntityField(entity, "mapLabel"),
+          name: fields.name,
+          mapLabel: fields.mapLabel,
           loot: itemsByType,
-          explorationTime: getEntityField(entity, "exploreTime"),
-          connectedRooms: getEntityField(entity, "connectedRooms").map((ref: LDTKEntityReference) =>
-            getRoomIdFromRef(ref.entityIid, layer),
-          ),
-          hasLighting: getEntityField(entity, "hasLighting"),
+          explorationTime: fields.exploreTime,
+          hasLighting: fields.hasLighting,
+          connectedRooms: fields.connectedRooms
+            .map((ref: LDTKEntityReference) => getRoomIdFromRef(ref.entityIid, layer))
         };
-      });
+      }
+    );
   });
 });
 

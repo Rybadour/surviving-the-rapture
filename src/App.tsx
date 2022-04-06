@@ -12,13 +12,10 @@ function App() {
   return (
     <ExplorationProvider>
     <InventoryProvider>
-    <UnimatrixProvider>
       <div className="App">
-        <Unimatrix />
         <Inventory />
         <Exploration />
       </div>
-    </UnimatrixProvider>
     </InventoryProvider>
     </ExplorationProvider>
   );

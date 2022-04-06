@@ -36,10 +36,7 @@ h2 {
   font-weight: bold;
 }
 .room.selected {
-  box-shadow: 0px 0px 10px 2px white;
-}
-.room.explored {
-  background-color: #44657a;
+  box-shadow: 0px 0px 5px 2px white;
 }
 .room.small-room .label {
   display: none;
@@ -55,6 +52,9 @@ h2 {
     #333 5px,
     #333 10px
   );
+}
+.room.explored {
+  background: #44657a;
 }
 
 .room-details {

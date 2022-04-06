@@ -10,7 +10,7 @@ export type ExplorationContext = {
   rooms: Record<string, Room>;
   selectedRoom: string;
   startExploring: (room: Room) => void;
-  updateProgress: (progress: number) => void;
+  updateProgress: (room: Room, progress: number) => void;
   stopExploring: (room: Room) => void;
   completeExploring: (room: Room) => void,
   setSelectedRoom: (roomId: string) => void;
@@ -22,7 +22,7 @@ const defaultContext: ExplorationContext = {
   rooms: {},
   selectedRoom: "",
   startExploring: (room: Room) => {},
-  updateProgress: (progress: number) => {},
+  updateProgress: (room: Room, progress: number) => {},
   stopExploring: (room: Room) => {},
   completeExploring: (room: Room) => {},
   setSelectedRoom: (roomId: string) => {},
@@ -57,6 +57,16 @@ export function ExplorationProvider(props: Record<string, any>) {
     setIsExploring(false);
   }
 
+  function updateProgress(room: Room, progress: number) {
+    setProgress(progress);
+
+    rooms[room.id] = {
+      ...room,
+      currentProgress: progress,
+    };
+    setRooms(rooms);
+  }
+
   function completeExploring(room: Room) {
     rooms[room.id] = {
       ...room,
@@ -80,7 +90,7 @@ export function ExplorationProvider(props: Record<string, any>) {
         rooms,
         selectedRoom,
         startExploring,
-        updateProgress: setProgress,
+        updateProgress,
         stopExploring,
         completeExploring,
         setSelectedRoom,

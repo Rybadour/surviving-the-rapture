@@ -17,7 +17,7 @@ export function startExploring(inventory: InventoryContext, exploration: Explora
         maxTime *= unlitTimeFactor;
       }
       if (elapsed < maxTime) {
-        exploration.updateProgress(elapsed / maxTime);
+        exploration.updateProgress(room, elapsed / maxTime);
         return;
       }
 

@@ -50,9 +50,12 @@ export function Exploration() {
                       </div>
 
                       <div className="progress">
-                        <div className="number">50%</div>
+                        <div className="number">
+                          {(room.isExplored ? 100 : (room.currentProgress * 100).toFixed(0))}
+                          % explored
+                        </div>
                         <div className="bar">
-                          <div className="bar-inside" style={{width: 0.5 * 100 + "%"}}></div>
+                          <div className="bar-inside" style={{width: room.currentProgress * 100 + "%"}}></div>
                         </div>
                       </div>
                     </div>
