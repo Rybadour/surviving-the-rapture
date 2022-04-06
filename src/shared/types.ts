@@ -19,6 +19,7 @@ export enum ItemType {
 export type RoomConfig = {
   id: string;
   name: string;
+  mapLabel: string;
   x: number;
   y: number;
   width: number;

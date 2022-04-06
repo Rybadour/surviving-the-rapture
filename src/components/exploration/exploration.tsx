@@ -1,13 +1,13 @@
-import { useCallback, useContext, useEffect } from "react";
+import React, { useCallback, useContext, useEffect } from "react";
+import ReactDOMServer from 'react-dom/server';
 import classNames from "classnames";
 
 import { ExplorationContext } from "../../contexts/exploration";
 import { InventoryContext } from "../../contexts/inventory";
 import { startExploring } from "../../game-logic/exploration";
 import { Room, RoomConfig } from "../../shared/types";
-import { range } from "../../shared/utils";
-import "./exploration.css";
-import rooms from "../../config/exploration";
+import "./exploration.scss";
+import RaptureTooltip from "../../shared/rapture-tooltip";
 
 export function Exploration() {
   const exploration = useContext(ExplorationContext);
@@ -36,26 +36,49 @@ export function Exploration() {
           {Object.entries(exploration.rooms)
             .filter(([r, room]) => room.isDiscovered)
             .map(([r, room]) => (
-              <div
-                className={classNames("room", {
-                  selected: exploration.selectedRoom == room.id,
-                  explored: room.isExplored,
-                  known: room.isKnown,
-                  unlit: !room.hasLighting,
-                  "small-room": room.width < 30 || room.height < 30,
-                })}
+              <RaptureTooltip
                 key={r}
-                onClick={() => onSelectRoom(room)}
-                style={{
-                  left: room.x,
-                  top: room.y,
-                  width: room.width,
-                  height: room.height,
-                }}
+                placement="top"
+                title={
+                  <React.Fragment>
+                    <div className={classNames("room-tooltip", {
+                      unlit: !room.hasLighting,
+                    })}>
+                      <div className="header">
+                        <div className="name">{room.name}</div>
+                        <i className="fas fa-lightbulb light-status"></i>
+                      </div>
+
+                      <div className="progress">
+                        <div className="number">50%</div>
+                        <div className="bar">
+                          <div className="bar-inside" style={{width: 0.5 * 100 + "%"}}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </React.Fragment>
+                }
               >
-                <div className="label">{room.name}</div>
-                {room.hasLighting ? null : <i className="fa-solid fa-eye-slash unlit-icon"></i>}
-              </div>
+                <div
+                  className={classNames("room", {
+                    selected: exploration.selectedRoom == room.id,
+                    explored: room.isExplored,
+                    known: room.isKnown,
+                    unlit: !room.hasLighting,
+                    "small-room": room.width < 30 || room.height < 30,
+                  })}
+                  key={r}
+                  onClick={() => onSelectRoom(room)}
+                  style={{
+                    left: room.x,
+                    top: room.y,
+                    width: room.width,
+                    height: room.height,
+                  }}
+                >
+                  <div className="label">{room.mapLabel}</div>
+                </div>
+              </RaptureTooltip>
             ))}
         </div>
 
@@ -76,14 +99,7 @@ function RoomDetails(props: { room: Room; exploration: ExplorationContext; onExp
     <div className="room-details">
       <h3>Room: {props.room.name}</h3>
       <div>
-        <span>Has {props.room.hasLighting ? "Lighting" : "No Lighting"}</span>
-        <i
-          className={classNames({
-            fas: true,
-            "fa-eye-slash": !props.room.hasLighting,
-            "fa-eye": props.room.hasLighting,
-          })}
-        ></i>
+        <span>Lights: {props.room.hasLighting ? "On" : "Off (4x exploration time)"}</span>
       </div>
       {props.room.isExplored ? (
         <div>Explored!</div>

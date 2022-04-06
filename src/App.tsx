@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import ReactDOM from "react-dom";
 import './App.css';
 import { UnimatrixProvider } from './contexts/unimatrix';
 import { Unimatrix } from './components/unimatrix/unimatrix';

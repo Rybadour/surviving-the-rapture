@@ -5,12 +5,12 @@
 		"doc": "https://ldtk.io/json",
 		"schema": "https://ldtk.io/files/JSON_SCHEMA.json",
 		"appAuthor": "Sebastien 'deepnight' Benard",
-		"appVersion": "1.1.0",
+		"appVersion": "1.1.1",
 		"url": "https://ldtk.io"
 	},
-	"jsonVersion": "1.1.0",
-	"appBuildId": 458005,
-	"nextUid": 22,
+	"jsonVersion": "1.1.1",
+	"appBuildId": 458076,
+	"nextUid": 23,
 	"identifierStyle": "Capitalize",
 	"worldLayout": "Free",
 	"worldGridWidth": 256,
@@ -128,6 +128,35 @@
 					"arrayMinLength": null,
 					"arrayMaxLength": null,
 					"editorDisplayMode": "ValueOnly",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "mapLabel",
+					"__type": "String",
+					"uid": 22,
+					"type": "F_String",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
 					"editorDisplayPos": "Above",
 					"editorAlwaysShow": false,
 					"editorCutLongValues": true,
@@ -526,24 +555,37 @@
 									"id": "V_String",
 									"params": ["Hallway"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 15, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [15] }] },
-								{ "__identifier": "connectedRooms", "__value": [ {
-									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								}, {
-									"entityIid": "a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+								{ "__identifier": "connectedRooms", "__value": [
+									{
+										"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
 								}, {
 									"id": "V_String",
 									"params": ["a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f"]
+								}, {
+									"id": "V_String",
+									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
 								} ] },
 								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
 									"id": "V_Bool",
@@ -572,12 +614,21 @@
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": ["ScrapMetal"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["ScrapMetal"]
 								}] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
-								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
+								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
@@ -605,6 +656,10 @@
 									"id": "V_String",
 									"params": ["Garage"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": "GAR", "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["GAR"]
+								}] },
 								{ "__identifier": "items", "__value": [ "Wires", "Wires", "ScrapMetal", "MachineParts" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["Wires"]
@@ -624,38 +679,38 @@
 										"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-									},
-									{
-										"entityIid": "de8903a0-8dc0-11ec-8e38-9f8b5da79dc2",
-										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-									},
-									{
-										"entityIid": "2a5bdf50-8dc0-11ec-8e38-e97afd1e5e72",
-										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 									},
 									{
 										"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "de8903a0-8dc0-11ec-8e38-9f8b5da79dc2",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "2a5bdf50-8dc0-11ec-8e38-e97afd1e5e72",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["849c1ed0-8dc0-11ec-8e38-6f5781e5374c"]
 								}, {
 									"id": "V_String",
+									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
+								}, {
+									"id": "V_String",
 									"params": ["de8903a0-8dc0-11ec-8e38-9f8b5da79dc2"]
 								}, {
 									"id": "V_String",
 									"params": ["2a5bdf50-8dc0-11ec-8e38-e97afd1e5e72"]
-								}, {
-									"id": "V_String",
-									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
 								} ] },
 								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
 									"id": "V_Bool",
@@ -687,9 +742,18 @@
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
-								{ "__identifier": "connectedRooms", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
+								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
@@ -714,6 +778,7 @@
 									"id": "V_String",
 									"params": ["Hallway"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [ "ScrapMetal", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["ScrapMetal"]
@@ -726,12 +791,12 @@
 									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}, {
 									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
@@ -768,6 +833,10 @@
 								{ "__identifier": "name", "__value": "Workshop", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Workshop"]
+								}] },
+								{ "__identifier": "mapLabel", "__value": "WS", "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["WS"]
 								}] },
 								{ "__identifier": "items", "__value": [
 									"Wires",
@@ -807,12 +876,12 @@
 									"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}, {
 									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["849c1ed0-8dc0-11ec-8e38-6f5781e5374c"]
@@ -850,6 +919,7 @@
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [ "Wires", "BrokenFlashlight" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["Wires"]
@@ -883,6 +953,7 @@
 									"id": "V_String",
 									"params": ["Hallway"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 20, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [20] }] },
 								{ "__identifier": "connectedRooms", "__value": [
@@ -890,31 +961,31 @@
 										"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 									},
 									{
 										"entityIid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 									},
 									{
 										"entityIid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 									},
 									{
 										"entityIid": "aaf22380-8dc0-11ec-896a-630ce1fb8c0d",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 									},
 									{
 										"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [
 									{
@@ -944,7 +1015,7 @@
 									"entityIid": "b17dc390-8dc0-11ec-8d05-3d19f1410a23",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["b17dc390-8dc0-11ec-8d05-3d19f1410a23"]
@@ -970,18 +1041,19 @@
 									"id": "V_String",
 									"params": ["Hallway"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
 								{ "__identifier": "connectedRooms", "__value": [ {
 									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}, {
 									"entityIid": "61905ac0-8dc0-11ec-8d05-8b338850f6f6",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
@@ -1012,6 +1084,10 @@
 								{ "__identifier": "name", "__value": "Storage Room", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Storage Room"]
+								}] },
+								{ "__identifier": "mapLabel", "__value": "STORE", "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["STORE"]
 								}] },
 								{ "__identifier": "items", "__value": [
 									"Battery",
@@ -1106,7 +1182,7 @@
 									"entityIid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["5ad1ab80-8dc0-11ec-8d05-6d8380a85712"]
@@ -1135,6 +1211,7 @@
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": ["LightBulb"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["LightBulb"]
@@ -1144,7 +1221,7 @@
 									"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
@@ -1169,19 +1246,23 @@
 							"px": [264,232],
 							"fieldInstances": [
 								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
-								{ "__identifier": "name", "__value": null, "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [] },
+								{ "__identifier": "name", "__value": "Hallway", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Hallway"]
+								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
 								{ "__identifier": "connectedRooms", "__value": [ {
 									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}, {
 									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
@@ -1209,9 +1290,13 @@
 							"px": [240,288],
 							"fieldInstances": [
 								{ "__identifier": "id", "__value": null, "__type": "String", "__tile": null, "defUid": 8, "realEditorValues": [] },
-								{ "__identifier": "name", "__value": "Backup Generator", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
+								{ "__identifier": "name", "__value": "Emergency Generator", "__type": "String", "__tile": null, "defUid": 6, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["Backup Generator"]
+									"params": ["Emergency Generator"]
+								}] },
+								{ "__identifier": "mapLabel", "__value": "EGEN", "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["EGEN"]
 								}] },
 								{ "__identifier": "items", "__value": [ "LightBulb", "MachineParts", "ScrapMetal", "ScrapMetal", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
 									{
@@ -1240,12 +1325,12 @@
 									"entityIid": "2b392a00-8dc0-11ec-8d05-d335ccfd65a9",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}, {
 									"entityIid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["2b392a00-8dc0-11ec-8d05-d335ccfd65a9"]
@@ -1280,6 +1365,7 @@
 									"id": "V_String",
 									"params": ["Closet"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Wires"]
@@ -1289,7 +1375,7 @@
 									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c03adff0-8dc0-11ec-8d05-73ee068e5469"]
@@ -1300,7 +1386,7 @@
 									"entityIid": "83aca350-8dc0-11ec-8d05-2b538dd2f748",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["83aca350-8dc0-11ec-8d05-2b538dd2f748"]
@@ -1366,6 +1452,7 @@
 									"id": "V_String",
 									"params": ["Stairwell"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [ "LightBulb", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["LightBulb"]
@@ -1378,7 +1465,7 @@
 									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
@@ -1410,6 +1497,7 @@
 									"id": "V_String",
 									"params": ["Elevator Lobby"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [ "Battery", "ScrapMetal", "ScrapElectronics", "Wires", "Wires" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
 									{
 										"id": "V_String",
@@ -1433,23 +1521,59 @@
 									}
 								] },
 								{ "__identifier": "exploreTime", "__value": 20, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [20] }] },
-								{ "__identifier": "connectedRooms", "__value": [ {
-									"entityIid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								}, {
-									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
-									"id": "V_String",
-									"params": ["c517b630-8dc0-11ec-896a-399b52ab3f9a"]
-								}, {
-									"id": "V_String",
-									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
-								} ] },
+								{ "__identifier": "connectedRooms", "__value": [
+									{
+										"entityIid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									},
+									{
+										"entityIid": "c68ffe50-8dc0-11ec-896a-0d6bc3a5c040",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["c517b630-8dc0-11ec-896a-399b52ab3f9a"]
+									},
+									{
+										"id": "V_String",
+										"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+									},
+									{
+										"id": "V_String",
+										"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
+									},
+									{
+										"id": "V_String",
+										"params": ["c5eabda0-8dc0-11ec-896a-6d255bb6e585"]
+									},
+									{
+										"id": "V_String",
+										"params": ["c68ffe50-8dc0-11ec-896a-0d6bc3a5c040"]
+									}
+								] },
 								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
 									"id": "V_Bool",
 									"params": [ true ]
@@ -1477,25 +1601,18 @@
 									"id": "V_String",
 									"params": ["Elevator 3"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
-								{ "__identifier": "connectedRooms", "__value": [ {
+								{ "__identifier": "connectedRooms", "__value": [{
 									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								}, {
-									"entityIid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
-								}, {
-									"id": "V_String",
-									"params": ["c5eabda0-8dc0-11ec-896a-6d255bb6e585"]
-								} ] },
+								}] },
 								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
 									"id": "V_Bool",
 									"params": [ true ]
@@ -1526,28 +1643,21 @@
 									"id": "V_String",
 									"params": ["Elevator 2"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Wires"]
 								}] },
 								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
-								{ "__identifier": "connectedRooms", "__value": [ {
-									"entityIid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
+								{ "__identifier": "connectedRooms", "__value": [{
+									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								}, {
-									"entityIid": "c68ffe50-8dc0-11ec-896a-0d6bc3a5c040",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
-								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["c517b630-8dc0-11ec-896a-399b52ab3f9a"]
-								}, {
-									"id": "V_String",
-									"params": ["c68ffe50-8dc0-11ec-896a-0d6bc3a5c040"]
-								} ] },
+									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
+								}] },
 								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
 									"id": "V_Bool",
 									"params": [ true ]
@@ -1578,19 +1688,20 @@
 									"id": "V_String",
 									"params": ["Elevator 1"]
 								}] },
+								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": ["ScrapMetal"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["ScrapMetal"]
 								}] },
 								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
 								{ "__identifier": "connectedRooms", "__value": [{
-									"entityIid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
+									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "08ce85a0-8dc0-11ec-a0eb-1195df261a4c"
+									"worldIid": "9ff49000-b4d0-11ec-9cdb-b379bae1f22f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["c5eabda0-8dc0-11ec-896a-6d255bb6e585"]
+									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
 								}] },
 								{ "__identifier": "hasLighting", "__value": true, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [{
 									"id": "V_Bool",

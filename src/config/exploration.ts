@@ -57,6 +57,7 @@ mapData.levels.forEach((level) => {
           width: entity.width,
           height: entity.height,
           name: getEntityField(entity, "name"),
+          mapLabel: getEntityField(entity, "mapLabel"),
           loot: itemsByType,
           explorationTime: getEntityField(entity, "exploreTime"),
           connectedRooms: getEntityField(entity, "connectedRooms").map((ref: LDTKEntityReference) =>

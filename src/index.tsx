@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
-import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faEyeSlash, faEye);
+library.add(faLightbulb);
 dom.watch();
 
 ReactDOM.render(
