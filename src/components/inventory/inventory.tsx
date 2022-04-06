@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { Tooltip } from '@mui/material';
+import React, { useContext } from 'react';
 import { InventoryContext } from '../../contexts/inventory';
 import { getItemIcon } from '../../shared/item-helper';
+import RaptureTooltip from '../../shared/rapture-tooltip';
 import { ItemType } from '../../shared/types';
 import './inventory.css';
 
@@ -12,20 +14,13 @@ export function Inventory() {
 
       <div className="inventory-grid">
         {Array.from(inventory.items, ([item, quantity]) => 
-          <Item key={item} type={item} quantity={quantity} />
+          <Tooltip key={item} placement="bottom" arrow title={item}>
+            <div className="item">
+              <img src={getItemIcon(item)} />
+              <span className="quantity">{quantity.toLocaleString()}</span>
+            </div>
+          </Tooltip>
         )}
       </div>
     </div>;
-}
-
-type ItemProps = {
-  type: ItemType,
-  quantity: number,
-};
-
-function Item(props: ItemProps) {
-  return <div className="item">
-    <img src={getItemIcon(props.type)} />
-    <span className="quantity">{props.quantity.toLocaleString()}</span>
-  </div>;
 }

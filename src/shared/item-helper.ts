@@ -18,6 +18,16 @@ export function getItemIcon(item: ItemType): string {
       return 'icons/turbine.png'; 
     case ItemType.LightBulb:
       return 'icons/light-bulb.png'; 
+    case ItemType.GasCan:
+      return 'icons/jerrycan.png';
+    case ItemType.Battery:
+      return 'icons/batteries.png';
+    case ItemType.RechargeableBattery:
+      return 'icons/charging.png';
+    case ItemType.BrokenFlashlight:
+      return 'icons/flashlight.png';
+    case ItemType.RubberHose:
+      return 'icons/rope-coil.png';
     default:
       return '';
   }
