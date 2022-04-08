@@ -8,6 +8,7 @@ import { startExploring } from "../../game-logic/exploration";
 import { Room, RoomConfig } from "../../shared/types";
 import "./exploration.scss";
 import RaptureTooltip from "../../shared/rapture-tooltip";
+import { Button } from "@mui/material";
 
 export function Exploration() {
   const exploration = useContext(ExplorationContext);
@@ -107,9 +108,9 @@ function RoomDetails(props: { room: Room; exploration: ExplorationContext; onExp
       {props.room.isExplored ? (
         <div>Explored!</div>
       ) : (
-        <button className="explore-button" onClick={() => props.onExplore()}>
+        <Button className="explore-button" onClick={() => props.onExplore()} variant="contained" color="success">
           Explore
-        </button>
+        </Button>
       )}
       {props.exploration.isExploring ? (
         <>
