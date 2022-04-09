@@ -1,15 +1,22 @@
-import { useContext } from "react";
+import { useCallback, useContext } from "react";
+import { Button, Tooltip } from "@mui/material";
 
 import './workbench.scss';
 import recipes from "../../config/recipes";
-import { RoomFeature } from "../../shared/types";
+import { Recipe, RoomFeature } from "../../shared/types";
 import { InventoryContext } from "../../contexts/inventory";
 import { WorkbenchContext } from "../../contexts/workbench";
-import { Button } from "@mui/material";
+import { craftRecipe } from "../../game-logic/crafting";
+import { ProgressBar } from "../progress-bar/progress-bar";
+import { getItemIcon } from "../../shared/item-helper";
 
 export function Workbench() {
     const workbench = useContext(WorkbenchContext);
     const inventory = useContext(InventoryContext);
+
+    const onCraftRecipe = useCallback((recipe: Recipe) => {
+      craftRecipe(inventory, workbench, recipe);
+    }, [workbench, inventory]);
 
     return <div className="workbench">
       <h2>Workbench</h2>
@@ -21,19 +28,24 @@ export function Workbench() {
           <div key={key} className="recipe">
             <div className="name">{recipe.name}</div>
 
-            <div className="produces">
-              <span>Create a</span>
-              {recipe.producedItem}
-            </div>
-
             <div>Need:</div>
             <div className="consumed-items">
               {Array.from(recipe.consumedItems).map(([item, num]) => 
-                <div>{item} - {num}</div>
+                <Tooltip key={item} placement="bottom" arrow title={item}>
+                  <div className="item">
+                    <img src={getItemIcon(item)} />
+                    <span className="quantity">{num.toLocaleString()}</span>
+                  </div>
+                </Tooltip>
               )}
             </div>
 
-            <Button>Craft</Button>
+            {workbench.isCrafting ? 
+              <ProgressBar progress={workbench.progress} /> :
+              <Button className="craft-button" onClick={() => onCraftRecipe(recipe)} variant="contained" color="success">
+                Craft
+              </Button>
+            }
           </div>
         )}
       </div>

@@ -7,6 +7,7 @@ const recipes: Record<string, Recipe> = {
     durationSec: 20,
     consumedItems: new Map([
       [ItemType.BrokenFlashlight, 1],
+      [ItemType.LightBulb, 1],
       [ItemType.Wires, 4]
     ]),
     producedItem: ItemType.Flashlight,

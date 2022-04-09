@@ -10,6 +10,7 @@ import "./exploration.scss";
 import RaptureTooltip from "../../shared/rapture-tooltip";
 import { Button } from "@mui/material";
 import { Workbench } from "../workbench/workbench";
+import { ProgressBar } from "../progress-bar/progress-bar";
 
 export function Exploration() {
   const exploration = useContext(ExplorationContext);
@@ -51,14 +52,12 @@ export function Exploration() {
                         <i className="fas fa-lightbulb light-status"></i>
                       </div>
 
-                      <div className="progress">
+                      <div className="progress-details">
                         <div className="number">
                           {(room.isExplored ? 100 : (room.currentProgress * 100).toFixed(0))}
                           % explored
                         </div>
-                        <div className="bar">
-                          <div className="bar-inside" style={{width: room.currentProgress * 100 + "%"}}></div>
-                        </div>
+                        <ProgressBar progress={room.currentProgress} />
                       </div>
                     </div>
                   </React.Fragment>
@@ -118,9 +117,7 @@ function RoomDetails(props: { room: Room; exploration: ExplorationContext; onExp
       {props.exploration.isExploring ? (
         <>
           <p>Exploring...</p>
-          <div className="progress">
-            <div className="progress-bar" style={{ width: props.exploration.progress * 100 + "%" }}></div>
-          </div>
+          <ProgressBar progress={props.exploration.progress} />
         </>
       ) : null}
     </div>

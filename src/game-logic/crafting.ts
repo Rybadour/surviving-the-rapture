@@ -1,29 +1,29 @@
 import * as d3 from "d3-timer";
 
-import { ExplorationContext } from "../contexts/exploration";
 import { InventoryContext } from "../contexts/inventory";
-import { Room } from "../shared/types";
+import { WorkbenchContext } from "../contexts/workbench";
+import { Recipe } from "../shared/types";
 
 const craftingTimeFactor = 0.05;
 
-export function startCrafting(inventory: InventoryContext, recipe: Recipe) {
-  exploration.startExploring(room);
+export function craftRecipe(inventory: InventoryContext, workbench: WorkbenchContext, recipe: Recipe) {
+  workbench.startCraft(recipe);
 
   return new Promise((resolve, reject) => {
     const timer = d3.timer((elapsed: number) => {
-      let maxTime = room.explorationTime * 1000 * explorationTimeFactor;
-      if (!room.hasLighting) {
-        maxTime *= unlitTimeFactor;
-      }
+      let maxTime = recipe.durationSec * 1000 * craftingTimeFactor;
       if (elapsed < maxTime) {
-        exploration.updateProgress(room, elapsed / maxTime);
+        workbench.setProgress(elapsed / maxTime);
         return;
       }
 
-      inventory.addItems(room.loot);
+      recipe.consumedItems.forEach((num, item) => 
+        inventory.removeItem(item, num)
+      );
+      inventory.addItems(new Map([[recipe.producedItem, 1]]));
 
       timer.stop();
-      exploration.completeExploring(room);
+      workbench.endCraft(recipe);
       resolve(true);
     });
   });

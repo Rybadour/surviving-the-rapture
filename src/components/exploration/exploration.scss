@@ -68,14 +68,7 @@ h2 {
 
 
   .progress {
-    width: 100%;
     height: 40px;
-    border: 2px solid white;
-  }
-
-  .progress-bar {
-    height: 100%;
-    background: white;
   }
 }
 
@@ -106,18 +99,12 @@ h2 {
     color: black;
   }
 
-  .progress {
+  .progress-details {
     width: 100%;
     text-align: center;
 
-    .bar {
-      width: 100%;
+    .progress {
       height: 6px;
-    }
-
-    .bar-inside {
-      height: 100%;
-      background-color: white;
     }
   }
 }

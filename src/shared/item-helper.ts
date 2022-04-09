@@ -26,6 +26,8 @@ export function getItemIcon(item: ItemType): string {
       return 'icons/charging.png';
     case ItemType.BrokenFlashlight:
       return 'icons/broken-flashlight.png';
+    case ItemType.Flashlight:
+      return 'icons/flashlight.png';
     case ItemType.RubberHose:
       return 'icons/rope-coil.png';
     default:
