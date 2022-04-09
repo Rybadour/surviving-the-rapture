@@ -21,7 +21,7 @@ const defaultContext: InventoryContext  = {
 export const InventoryContext = createContext(defaultContext);
 
 export function InventoryProvider(props: Record<string, any>) {
-  const [items, setItems] = useState<ItemsByType>(new Map([[ItemType.Wires, 10], [ItemType.MachineParts, 2]]));
+  const [items, setItems] = useState<ItemsByType>(new Map([]));
 
   function addItem(item: ItemType, quantity: number) {
     let stack = (items.get(item) ?? 0); 

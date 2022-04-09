@@ -4,6 +4,7 @@ export enum ItemType {
   Battery = "Battery",
   BrokenFlashlight = "BrokenFlashlight",
   CPU = "CPU",
+  Flashlight = "Flashlight",
   GasCan = "GasCan",
   LightBulb = "LightBulb",
   MachineParts = "MachineParts",
