@@ -57,7 +57,7 @@ export function Exploration() {
                           {(room.isExplored ? 100 : (room.currentProgress * 100).toFixed(0))}
                           % explored
                         </div>
-                        <ProgressBar progress={room.currentProgress} />
+                        {room.isExplored ? null : <ProgressBar progress={room.currentProgress} />}
                       </div>
                     </div>
                   </React.Fragment>

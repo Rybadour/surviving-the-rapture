@@ -17,10 +17,7 @@ export function craftRecipe(inventory: InventoryContext, workbench: WorkbenchCon
         return;
       }
 
-      recipe.consumedItems.forEach((num, item) => 
-        inventory.removeItem(item, num)
-      );
-      inventory.addItems(new Map([[recipe.producedItem, 1]]));
+      inventory.craftRecipe(recipe);
 
       timer.stop();
       workbench.endCraft(recipe);

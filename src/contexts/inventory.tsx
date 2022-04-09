@@ -1,60 +1,72 @@
 import { createContext, useEffect, useState } from "react";
-import { ItemType } from "../shared/types";
+import { ItemType, Recipe } from "../shared/types";
 
 export type ItemsByType = Map<ItemType, number>;
 
 export type InventoryContext = {
   items: ItemsByType,
-  addItem: (item: ItemType, quantity: number) => void,
   addItems: (newItems: ItemsByType) => void,
-  canAfford: (item: ItemType, quantity: number) => boolean,
-  removeItem: (item: ItemType, quantity: number) => boolean,
+  canAffordItems: (items: Map<ItemType, number>) => boolean,
+  craftRecipe: (recipe: Recipe) => void,
 };
 
 const defaultContext: InventoryContext  = {
   items: new Map(),
-  addItem: (item: ItemType, quantity: number) => {},
   addItems: (newItems: ItemsByType) => {},
-  canAfford: (item: ItemType, quantity: number) => false,
-  removeItem: (item: ItemType, quantity: number) => false,
+  canAffordItems: (items: Map<ItemType, number>) => false,
+  craftRecipe: (recipe: Recipe) => {},
 };
 export const InventoryContext = createContext(defaultContext);
 
 export function InventoryProvider(props: Record<string, any>) {
   const [items, setItems] = useState<ItemsByType>(new Map([]));
 
-  function addItem(item: ItemType, quantity: number) {
-    let stack = (items.get(item) ?? 0); 
-    stack += quantity;
-    setItems(new Map(items).set(item, stack));
-  }
-
   function addItems(newItems: Map<ItemType, number>) {
     const itemsCopy = new Map(items);
     newItems.forEach((quantity, type) => 
-      itemsCopy.set(type, quantity + (items.get(type) ?? 0))
+      addItem(itemsCopy, type, quantity)
     );
     setItems(itemsCopy);
   }
 
-  function canAfford(item: ItemType, quantity: number) {
-    const contains = items.get(item) ?? 0;
-    return contains >= quantity;
+  function canAffordItems(items: Map<ItemType, number>) {
+    return Array.from(items)
+      .every(([item, quantity]) => canAffordItem(items, item, quantity));
   }
 
-  function removeItem(item: ItemType, quantity: number) {
-    if (items.get(item) ?? 0 < quantity) {
-      return false;
-    }
-
-    let stack = (items.get(item) ?? 0);
-    stack -= quantity;
-    setItems(new Map(items).set(item, stack));
-    return true;
+  function craftRecipe(recipe: Recipe) {
+    const itemsCopy = new Map(items);
+    addItem(itemsCopy, recipe.producedItem, 1);
+    Array.from(recipe.consumedItems).forEach(([item, quantity]) => 
+      removeItem(itemsCopy, item, quantity)
+    );
+    setItems(itemsCopy);
   }
 
   return <InventoryContext.Provider value={{
     items,
-    addItem, addItems, canAfford, removeItem
+    addItems, canAffordItems: canAffordItems, craftRecipe
   }} {...props} />;
+}
+
+function canAffordItem(items: Map<ItemType, number>, item: ItemType, quantity: number) {
+  const contains = items.get(item) ?? 0;
+  return contains >= quantity;
+}
+
+function addItem(items: Map<ItemType, number>, item: ItemType, quantity: number) {
+  let stack = (items.get(item) ?? 0); 
+  stack += quantity;
+  items.set(item, stack);
+}
+
+function removeItem(items: Map<ItemType, number>, item: ItemType, quantity: number) {
+  if ((items.get(item) ?? 0) < quantity) {
+    return false;
+  }
+
+  let stack = (items.get(item) ?? 0);
+  stack -= quantity;
+  items.set(item, stack);
+  return true;
 }
