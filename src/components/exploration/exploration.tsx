@@ -5,10 +5,11 @@ import classNames from "classnames";
 import { ExplorationContext } from "../../contexts/exploration";
 import { InventoryContext } from "../../contexts/inventory";
 import { startExploring } from "../../game-logic/exploration";
-import { Room, RoomConfig } from "../../shared/types";
+import { Room, RoomConfig, RoomFeature } from "../../shared/types";
 import "./exploration.scss";
 import RaptureTooltip from "../../shared/rapture-tooltip";
 import { Button } from "@mui/material";
+import { Workbench } from "../workbench/workbench";
 
 export function Exploration() {
   const exploration = useContext(ExplorationContext);
@@ -105,16 +106,18 @@ function RoomDetails(props: { room: Room; exploration: ExplorationContext; onExp
       <div>
         <span>Lights: {props.room.hasLighting ? "On" : "Off (4x exploration time)"}</span>
       </div>
-      {props.room.isExplored ? (
+      {props.room.isExplored ? <>
         <div>Explored!</div>
-      ) : (
+        {props.room.feature == RoomFeature.Workbench ? <Workbench /> : null}
+      </> : null}
+      {!props.room.isExplored && !props.exploration.isExploring ?
         <Button className="explore-button" onClick={() => props.onExplore()} variant="contained" color="success">
           Explore
-        </Button>
-      )}
+        </Button> : null
+      }
       {props.exploration.isExploring ? (
         <>
-          <p>Exploring!</p>
+          <p>Exploring...</p>
           <div className="progress">
             <div className="progress-bar" style={{ width: props.exploration.progress * 100 + "%" }}></div>
           </div>

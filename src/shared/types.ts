@@ -29,6 +29,7 @@ export type RoomConfig = {
   explorationTime: number;
   connectedRooms: string[];
   hasLighting: boolean;
+  feature: RoomFeature;
 };
 
 export type Room = RoomConfig & {
@@ -37,4 +38,16 @@ export type Room = RoomConfig & {
   isExplored: boolean;
   currentProgress: number;
   remainingItems: ItemType[];
+};
+
+export enum RoomFeature {
+  Workbench = "Workbench",
+}
+
+export type Recipe = {
+  name: string;
+  feature: RoomFeature,
+  durationSec: number;
+  consumedItems: Map<ItemType, number>;
+  producedItem: ItemType;
 };

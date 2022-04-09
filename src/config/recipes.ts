@@ -1,0 +1,16 @@
+import { ItemType, Recipe, RoomFeature } from "../shared/types";
+
+const recipes: Record<string, Recipe> = {
+  "fix-flashlight": {
+    name: "Fix Flashlight",
+    feature: RoomFeature.Workbench,
+    durationSec: 20,
+    consumedItems: new Map([
+      [ItemType.BrokenFlashlight, 1],
+      [ItemType.Wires, 4]
+    ]),
+    producedItem: ItemType.Flashlight,
+  } 
+};
+
+export default recipes;

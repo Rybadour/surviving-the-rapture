@@ -1,4 +1,4 @@
-import { ItemType, RoomConfig } from "../shared/types";
+import { ItemType, RoomConfig, RoomFeature } from "../shared/types";
 import mapData from "../../public/Map1Test.json";
 
 type LDTKEntityInstance = {
@@ -69,6 +69,7 @@ mapData.levels.forEach((level) => {
           loot: itemsByType,
           explorationTime: fields.exploreTime,
           hasLighting: fields.hasLighting,
+          feature: RoomFeature[fields.feature],
           connectedRooms: fields.connectedRooms
             .map((ref: LDTKEntityReference) => getRoomIdFromRef(ref.entityIid, layer))
         };
