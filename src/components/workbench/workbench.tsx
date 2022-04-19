@@ -9,6 +9,7 @@ import { WorkbenchContext } from "../../contexts/workbench";
 import { craftRecipe } from "../../game-logic/crafting";
 import { ProgressBar } from "../progress-bar/progress-bar";
 import { getItemIcon } from "../../shared/item-helper";
+import classNames from "classnames";
 
 export function Workbench() {
     const workbench = useContext(WorkbenchContext);
@@ -32,7 +33,11 @@ export function Workbench() {
             <div className="consumed-items">
               {Array.from(recipe.consumedItems).map(([item, num]) => 
                 <Tooltip key={item} placement="bottom" arrow title={item}>
-                  <div className="item">
+                    <div
+                      className={classNames("item", {
+                        satisfied: inventory.canAffordItem(item, num),
+                      })}
+                    >
                     <img src={getItemIcon(item)} />
                     <span className="quantity">{num.toLocaleString()}</span>
                   </div>
@@ -42,7 +47,13 @@ export function Workbench() {
 
             {workbench.isCrafting ? 
               <ProgressBar progress={workbench.progress} /> :
-              <Button className="craft-button" onClick={() => onCraftRecipe(recipe)} variant="contained" color="success">
+              <Button
+                className="craft-button"
+                onClick={() => onCraftRecipe(recipe)}
+                variant="contained"
+                color="success"
+                disabled={!inventory.canAffordItems(recipe.consumedItems)}
+              >
                 Craft
               </Button>
             }

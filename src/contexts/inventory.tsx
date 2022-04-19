@@ -6,6 +6,7 @@ export type ItemsByType = Map<ItemType, number>;
 export type InventoryContext = {
   items: ItemsByType,
   addItems: (newItems: ItemsByType) => void,
+  canAffordItem: (item: ItemType, quantity: number) => boolean,
   canAffordItems: (items: Map<ItemType, number>) => boolean,
   craftRecipe: (recipe: Recipe) => void,
 };
@@ -13,6 +14,7 @@ export type InventoryContext = {
 const defaultContext: InventoryContext  = {
   items: new Map(),
   addItems: (newItems: ItemsByType) => {},
+  canAffordItem: (item: ItemType, quantity: number) => false,
   canAffordItems: (items: Map<ItemType, number>) => false,
   craftRecipe: (recipe: Recipe) => {},
 };
@@ -29,8 +31,13 @@ export function InventoryProvider(props: Record<string, any>) {
     setItems(itemsCopy);
   }
 
-  function canAffordItems(items: Map<ItemType, number>) {
-    return Array.from(items)
+  function canAffordItem(item: ItemType, quantity: number) {
+    const contains = items.get(item) ?? 0;
+    return contains >= quantity;
+  }
+
+  function canAffordItems(itemsNeeded: Map<ItemType, number>) {
+    return Array.from(itemsNeeded)
       .every(([item, quantity]) => canAffordItem(items, item, quantity));
   }
 
@@ -45,13 +52,8 @@ export function InventoryProvider(props: Record<string, any>) {
 
   return <InventoryContext.Provider value={{
     items,
-    addItems, canAffordItems: canAffordItems, craftRecipe
+    addItems, canAffordItem, canAffordItems, craftRecipe
   }} {...props} />;
-}
-
-function canAffordItem(items: Map<ItemType, number>, item: ItemType, quantity: number) {
-  const contains = items.get(item) ?? 0;
-  return contains >= quantity;
 }
 
 function addItem(items: Map<ItemType, number>, item: ItemType, quantity: number) {

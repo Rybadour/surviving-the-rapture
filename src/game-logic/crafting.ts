@@ -11,7 +11,7 @@ export function craftRecipe(inventory: InventoryContext, workbench: WorkbenchCon
 
   return new Promise((resolve, reject) => {
     const timer = d3.timer((elapsed: number) => {
-      let maxTime = recipe.durationSec * 1000 * craftingTimeFactor;
+      const maxTime = recipe.durationSec * 1000 * craftingTimeFactor;
       if (elapsed < maxTime) {
         workbench.setProgress(elapsed / maxTime);
         return;

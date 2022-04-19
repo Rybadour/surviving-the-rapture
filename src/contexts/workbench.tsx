@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { ItemType, Recipe } from "../shared/types";
+import { Recipe } from "../shared/types";
 
 export type WorkbenchContext = {
   isCrafting: boolean,
