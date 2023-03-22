@@ -86,40 +86,40 @@ export function Exploration() {
             ))}
         </div>
 
-        {exploration.selectedRoom != "" ? (
-          <RoomDetails
-            room={exploration.rooms[exploration.selectedRoom]}
-            exploration={exploration}
-            onExplore={() => onExplore(exploration.rooms[exploration.selectedRoom])}
-          />
-        ) : null}
+        <div className="room-details">
+          {exploration.selectedRoom != "" ? (
+            <RoomDetails
+              room={exploration.rooms[exploration.selectedRoom]}
+              exploration={exploration}
+              onExplore={() => onExplore(exploration.rooms[exploration.selectedRoom])}
+            />
+          ) : null}
+        </div>
       </div>
     </div>
   );
 }
 
 function RoomDetails(props: { room: Room; exploration: ExplorationContext; onExplore: () => void }) {
-  return (
-    <div className="room-details">
-      <h3>Room: {props.room.name}</h3>
-      <div>
-        <span>Lights: {props.room.hasLighting ? "On" : "Off (4x exploration time)"}</span>
-      </div>
-      {props.room.isExplored ? <>
-        <div>Explored!</div>
-        {props.room.feature == RoomFeature.Workbench ? <Workbench /> : null}
-      </> : null}
-      {!props.room.isExplored && !props.exploration.isExploring ?
-        <Button className="explore-button" onClick={() => props.onExplore()} variant="contained" color="success">
-          Explore
-        </Button> : null
-      }
-      {props.exploration.isExploring ? (
-        <>
-          <p>Exploring...</p>
-          <ProgressBar progress={props.exploration.progress} />
-        </>
-      ) : null}
+  return <>
+    <h3>Room: {props.room.name}</h3>
+    <div>
+      <span>Lights: {props.room.hasLighting ? "On" : "Off (4x exploration time)"}</span>
     </div>
-  );
+    {props.room.isExplored ? <>
+      <div>Explored!</div>
+      {props.room.feature == RoomFeature.Workbench ? <Workbench /> : null}
+    </> : null}
+    {!props.room.isExplored && !props.exploration.isExploring ?
+      <Button className="explore-button" onClick={() => props.onExplore()} variant="contained" color="success">
+        Explore
+      </Button> : null
+    }
+    {props.exploration.isExploring ? (
+      <>
+        <p>Exploring...</p>
+        <ProgressBar progress={props.exploration.progress} />
+      </>
+    ) : null}
+  </>;
 }

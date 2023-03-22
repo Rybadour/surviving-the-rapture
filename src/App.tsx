@@ -15,8 +15,8 @@ function App() {
     <ExplorationProvider>
     <InventoryProvider>
       <div className="App">
-        <Inventory />
         <Exploration />
+        <Inventory />
       </div>
     </InventoryProvider>
     </ExplorationProvider>

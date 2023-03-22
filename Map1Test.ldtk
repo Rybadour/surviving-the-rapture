@@ -5,12 +5,12 @@
 		"doc": "https://ldtk.io/json",
 		"schema": "https://ldtk.io/files/JSON_SCHEMA.json",
 		"appAuthor": "Sebastien 'deepnight' Benard",
-		"appVersion": "1.1.1",
+		"appVersion": "1.1.3",
 		"url": "https://ldtk.io"
 	},
-	"jsonVersion": "1.1.1",
-	"appBuildId": 458076,
-	"nextUid": 23,
+	"jsonVersion": "1.1.3",
+	"appBuildId": 458364,
+	"nextUid": 24,
 	"identifierStyle": "Capitalize",
 	"worldLayout": "Free",
 	"worldGridWidth": 256,
@@ -322,35 +322,6 @@
 					"tilesetUid": null
 				},
 				{
-					"identifier": "capacityItems",
-					"__type": "Array<EntityRef>",
-					"uid": 18,
-					"type": "F_EntityRef",
-					"isArray": true,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlyTags",
-					"allowedRefTags": ["Item"],
-					"tilesetUid": null
-				},
-				{
 					"identifier": "unlockPowerRequired",
 					"__type": "Int",
 					"uid": 21,
@@ -378,71 +349,13 @@
 					"allowedRefs": "OnlySame",
 					"allowedRefTags": [],
 					"tilesetUid": null
-				}
-			]
-		},
-		{
-			"identifier": "ItemWithCapacity",
-			"uid": 15,
-			"tags": ["Item"],
-			"width": 2,
-			"height": 2,
-			"resizableX": false,
-			"resizableY": false,
-			"keepAspectRatio": false,
-			"tileOpacity": 1,
-			"fillOpacity": 1,
-			"lineOpacity": 1,
-			"hollow": false,
-			"color": "#D994D5",
-			"renderMode": "Rectangle",
-			"showName": false,
-			"tilesetId": null,
-			"tileId": null,
-			"tileRenderMode": "FitInside",
-			"tileRect": null,
-			"nineSliceBorders": [],
-			"maxCount": 0,
-			"limitScope": "PerLevel",
-			"limitBehavior": "MoveLastOne",
-			"pivotX": 0,
-			"pivotY": 0,
-			"fieldDefs": [
-				{
-					"identifier": "ItemType",
-					"__type": "LocalEnum.Items",
-					"uid": 16,
-					"type": "F_Enum(4)",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
 				},
 				{
-					"identifier": "Capacity",
-					"__type": "Int",
-					"uid": 17,
-					"type": "F_Int",
-					"isArray": false,
+					"identifier": "capacityItems",
+					"__type": "Array<String>",
+					"uid": 23,
+					"type": "F_String",
+					"isArray": true,
 					"canBeNull": false,
 					"arrayMinLength": null,
 					"arrayMaxLength": null,
@@ -563,19 +476,19 @@
 										"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
@@ -592,8 +505,8 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -624,15 +537,15 @@
 									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -679,25 +592,25 @@
 										"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "de8903a0-8dc0-11ec-8e38-9f8b5da79dc2",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "2a5bdf50-8dc0-11ec-8e38-e97afd1e5e72",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
@@ -720,8 +633,8 @@
 									"id": "V_String",
 									"params": ["Trucks"]
 								}] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -749,15 +662,15 @@
 									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["eff9e370-8dc0-11ec-8e38-b74cc005925c"]
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -791,12 +704,12 @@
 									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}, {
 									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
@@ -809,8 +722,8 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -877,19 +790,19 @@
 										"entityIid": "849c1ed0-8dc0-11ec-8e38-6f5781e5374c",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "809742f0-8dc0-11ec-8e38-e7b7387010c4",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
@@ -909,8 +822,8 @@
 									"id": "V_String",
 									"params": ["Workbench"]
 								}] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -944,15 +857,15 @@
 									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -981,31 +894,31 @@
 										"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "aaf22380-8dc0-11ec-896a-630ce1fb8c0d",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [
 									{
@@ -1031,8 +944,8 @@
 								] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1060,12 +973,12 @@
 									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}, {
 									"entityIid": "61905ac0-8dc0-11ec-8d05-8b338850f6f6",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
@@ -1075,8 +988,8 @@
 								} ] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1194,15 +1107,15 @@
 									"entityIid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["5ad1ab80-8dc0-11ec-8d05-6d8380a85712"]
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1233,15 +1146,15 @@
 									"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1269,12 +1182,12 @@
 									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}, {
 									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
@@ -1284,8 +1197,8 @@
 								} ] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1337,12 +1250,12 @@
 									"entityIid": "2b392a00-8dc0-11ec-8d05-d335ccfd65a9",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}, {
 									"entityIid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["2b392a00-8dc0-11ec-8d05-d335ccfd65a9"]
@@ -1355,8 +1268,8 @@
 									"id": "V_String",
 									"params": ["BackupGenerator"]
 								}] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1387,15 +1300,15 @@
 									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c03adff0-8dc0-11ec-8d05-73ee068e5469"]
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1429,7 +1342,7 @@
 									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
@@ -1439,8 +1352,8 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1462,59 +1375,50 @@
 									"params": ["Elevator Lobby"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [ "Battery", "ScrapMetal", "ScrapElectronics", "Wires", "Wires" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
-									{
-										"id": "V_String",
-										"params": ["Battery"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapMetal"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapElectronics"]
-									},
-									{
-										"id": "V_String",
-										"params": ["Wires"]
-									},
-									{
-										"id": "V_String",
-										"params": ["Wires"]
-									}
-								] },
+								{ "__identifier": "items", "__value": [ "ScrapMetal", "ScrapElectronics", "Wires", "Wires" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								}, {
+									"id": "V_String",
+									"params": ["ScrapElectronics"]
+								}, {
+									"id": "V_String",
+									"params": ["Wires"]
+								}, {
+									"id": "V_String",
+									"params": ["Wires"]
+								} ] },
 								{ "__identifier": "exploreTime", "__value": 20, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [20] }] },
 								{ "__identifier": "connectedRooms", "__value": [
 									{
 										"entityIid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									},
 									{
 										"entityIid": "c68ffe50-8dc0-11ec-896a-0d6bc3a5c040",
 										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-										"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+										"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [
 									{
@@ -1543,8 +1447,8 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1572,7 +1476,7 @@
 									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
@@ -1585,8 +1489,8 @@
 									"id": "V_String",
 									"params": ["Elevator"]
 								}] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1617,7 +1521,7 @@
 									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
@@ -1630,8 +1534,8 @@
 									"id": "V_String",
 									"params": ["Elevator"]
 								}] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1662,7 +1566,7 @@
 									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "89fa1a20-b4d0-11ec-87ef-41167a9af248"
+									"worldIid": "19488660-b4d0-11ec-af55-e5acf050fe9f"
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 11, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
@@ -1675,8 +1579,8 @@
 									"id": "V_String",
 									"params": ["Elevator"]
 								}] },
-								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 18, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] }
+								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] }
 							]
 						}
 					]

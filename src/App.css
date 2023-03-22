@@ -13,16 +13,10 @@ body, html {
 .App {
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
   width: 100%;
   margin: auto;
-  grid-gap: 100px;
-}
-
-.App > * {
-  width: 400px;
+  gap: 30px;
 }
 
 h2 {
