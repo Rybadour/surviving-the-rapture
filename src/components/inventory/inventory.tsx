@@ -1,13 +1,11 @@
 import { Tooltip } from '@mui/material';
 import React, { useContext } from 'react';
-import { InventoryContext } from '../../contexts/inventory';
 import { getItemIcon } from '../../shared/item-helper';
-import RaptureTooltip from '../../shared/rapture-tooltip';
-import { ItemType } from '../../shared/types';
+import useStore from '../../store';
 import './inventory.css';
 
 export function Inventory() {
-    const inventory = useContext(InventoryContext);
+    const inventory = useStore(s => s.inventory);
 
     return <div className="inventory">
       <h2>Inventory</h2>

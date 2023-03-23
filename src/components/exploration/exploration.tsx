@@ -1,20 +1,19 @@
-import React, { useCallback, useContext, useEffect } from "react";
-import ReactDOMServer from 'react-dom/server';
+import React, { useCallback, useContext } from "react";
 import classNames from "classnames";
 
-import { ExplorationContext } from "../../contexts/exploration";
-import { InventoryContext } from "../../contexts/inventory";
 import { startExploring } from "../../game-logic/exploration";
-import { Room, RoomConfig, RoomFeature } from "../../shared/types";
+import { Room, RoomFeature } from "../../shared/types";
 import "./exploration.scss";
 import RaptureTooltip from "../../shared/rapture-tooltip";
 import { Button } from "@mui/material";
 import { Workbench } from "../workbench/workbench";
 import { ProgressBar } from "../progress-bar/progress-bar";
+import useStore from "../../store";
+import { ExplorationSlice } from "../../store/exploration";
 
 export function Exploration() {
-  const exploration = useContext(ExplorationContext);
-  const inventory = useContext(InventoryContext);
+  const exploration = useStore(s => s.exploration);
+  const inventory = useStore(s => s.inventory);
 
   const onExplore = useCallback(
     async (room: Room | null) => {
@@ -100,7 +99,7 @@ export function Exploration() {
   );
 }
 
-function RoomDetails(props: { room: Room; exploration: ExplorationContext; onExplore: () => void }) {
+function RoomDetails(props: { room: Room; exploration: ExplorationSlice; onExplore: () => void }) {
   return <>
     <h3>Room: {props.room.name}</h3>
     <div>

@@ -1,19 +1,19 @@
 import { useCallback, useContext } from "react";
 import { Button, Tooltip } from "@mui/material";
 
+import classNames from "classnames";
+
 import './workbench.scss';
 import recipes from "../../config/recipes";
 import { Recipe, RoomFeature } from "../../shared/types";
-import { InventoryContext } from "../../contexts/inventory";
-import { WorkbenchContext } from "../../contexts/workbench";
 import { craftRecipe } from "../../game-logic/crafting";
 import { ProgressBar } from "../progress-bar/progress-bar";
 import { getItemIcon } from "../../shared/item-helper";
-import classNames from "classnames";
+import useStore from "../../store";
 
 export function Workbench() {
-    const workbench = useContext(WorkbenchContext);
-    const inventory = useContext(InventoryContext);
+    const workbench = useStore(s => s.workbench);
+    const inventory = useStore(s => s.inventory);
 
     const onCraftRecipe = useCallback((recipe: Recipe) => {
       craftRecipe(inventory, workbench, recipe);
