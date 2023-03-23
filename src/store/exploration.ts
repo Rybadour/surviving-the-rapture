@@ -11,7 +11,7 @@ export interface ExplorationSlice {
   startExploring: (room: Room) => void;
   updateProgress: (room: Room, progress: number) => void;
   stopExploring: (room: Room) => void;
-  completeExploring: (room: Room) => void,
+  completeExploring: (room: Room) => void;
   setSelectedRoom: (roomId: string) => void;
 }
 
@@ -37,17 +37,17 @@ const createExplorationSlice: MyCreateSlice<ExplorationSlice, []> = (set, get) =
 
     startExploring: (room: Room) => {
       set({
-        progress: 0, 
+        progress: 0,
         isExploring: true,
       });
     },
 
     stopExploring: (room: Room) => {
-      set({isExploring: false});
+      set({ isExploring: false });
     },
 
     updateProgress: (room: Room, progress: number) => {
-      const newRooms = {...get().rooms};
+      const newRooms = { ...get().rooms };
       newRooms[room.id] = {
         ...room,
         currentProgress: progress,
@@ -59,7 +59,7 @@ const createExplorationSlice: MyCreateSlice<ExplorationSlice, []> = (set, get) =
     },
 
     completeExploring: (room: Room) => {
-      const newRooms = {...get().rooms};
+      const newRooms = { ...get().rooms };
       newRooms[room.id] = {
         ...room,
         isExplored: true,
@@ -77,7 +77,7 @@ const createExplorationSlice: MyCreateSlice<ExplorationSlice, []> = (set, get) =
     },
 
     setSelectedRoom: (roomId: string) => {
-      set({selectedRoom: roomId});
+      set({ selectedRoom: roomId });
     },
   };
 };
