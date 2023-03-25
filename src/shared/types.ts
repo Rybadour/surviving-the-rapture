@@ -17,7 +17,7 @@ export enum ItemType {
   Wires = "Wires",
 }
 
-export type RoomConfig = {
+export interface RoomConfig {
   id: string;
   name: string;
   mapLabel: string;
@@ -30,7 +30,8 @@ export type RoomConfig = {
   connectedRooms: string[];
   hasLighting: boolean;
   feature: RoomFeature;
-};
+  explorations: Exploration[];
+}
 
 export type Room = RoomConfig & {
   isDiscovered: boolean;
@@ -40,14 +41,20 @@ export type Room = RoomConfig & {
   remainingItems: ItemType[];
 };
 
+export interface Exploration {
+  items: ItemsByType;
+  doorReveals: string[];
+  ancedote: string;
+}
+
 export enum RoomFeature {
   Workbench = "Workbench",
 }
 
-export type Recipe = {
+export interface Recipe {
   name: string;
-  feature: RoomFeature,
+  feature: RoomFeature;
   durationSec: number;
   consumedItems: Map<ItemType, number>;
   producedItem: ItemType;
-};
+}
