@@ -24,7 +24,7 @@ Object.keys(roomConfig).forEach((roomId) => {
     isKnown: false,
     isExplored: false,
     currentProgress: 0,
-    remainingItems: [],
+    currentChunks: 0,
   };
 });
 
@@ -60,16 +60,22 @@ const createExplorationSlice: MyCreateSlice<ExplorationSlice, []> = (set, get) =
 
     completeExploring: (room: Room) => {
       const newRooms = { ...get().rooms };
-      newRooms[room.id] = {
+      const newRoom = {
         ...room,
-        isExplored: true,
+        currentChunks: room.currentChunks + 1,
       };
-      room.connectedRooms.forEach((roomId) => {
-        newRooms[roomId] = {
-          ...newRooms[roomId],
-          isDiscovered: true,
-        };
-      });
+      newRooms[room.id] = newRoom;
+
+      if (newRoom.currentChunks >= newRoom.explorations.length) {
+        newRoom.isExplored = true;
+        room.connectedRooms.forEach((roomId) => {
+          newRooms[roomId] = {
+            ...newRooms[roomId],
+            isDiscovered: true,
+          };
+        });
+      }
+
       set({
         rooms: newRooms,
         isExploring: false,

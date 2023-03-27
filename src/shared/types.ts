@@ -38,7 +38,7 @@ export type Room = RoomConfig & {
   isKnown: boolean;
   isExplored: boolean;
   currentProgress: number;
-  remainingItems: ItemType[];
+  currentChunks: number;
 };
 
 export interface Exploration {

@@ -10,6 +10,7 @@ import { Workbench } from "../workbench/workbench";
 import { ProgressBar } from "../progress-bar/progress-bar";
 import useStore from "../../store";
 import { ExplorationSlice } from "../../store/exploration";
+import { formatNumber } from "../../shared/utils";
 
 export function Exploration() {
   const exploration = useStore(s => s.exploration);
@@ -105,8 +106,8 @@ function RoomDetails(props: { room: Room; exploration: ExplorationSlice; onExplo
     <div>
       <span>Lights: {props.room.hasLighting ? "On" : "Off (4x exploration time)"}</span>
     </div>
+    <div>{formatNumber(props.room.currentChunks/props.room.explorations.length * 100, 0, 0)}% Explored</div>
     {props.room.isExplored ? <>
-      <div>Explored!</div>
       {props.room.feature == RoomFeature.Workbench ? <Workbench /> : null}
     </> : null}
     {!props.room.isExplored && !props.exploration.isExploring ?
