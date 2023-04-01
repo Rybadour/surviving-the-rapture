@@ -808,9 +808,9 @@
 									"id": "V_String",
 									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
 								} ] },
-								{ "__identifier": "anecdote", "__value": "some machine parts and another closet, another hallway!", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
+								{ "__identifier": "anecdote", "__value": "some machine parts, another closet, and another hallway!", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["some machine parts and another closet, another hallway!"]
+									"params": ["some machine parts, another closet, and another hallway!"]
 								}] }
 							]
 						},
@@ -873,7 +873,15 @@
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f"]
+								}] },
 								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
 							]
 						},
@@ -892,7 +900,15 @@
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
+								}] },
 								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
 							]
 						},
@@ -910,9 +926,21 @@
 							"px": [40,264],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [ "ScrapElectronics", "ScrapElectronics", "Wires" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["ScrapElectronics"]
+								}, {
+									"id": "V_String",
+									"params": ["ScrapElectronics"]
+								}, {
+									"id": "V_String",
+									"params": ["Wires"]
+								} ] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": "looks like a workbench with some tools you can use to fix some simple electronics", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["looks like a workbench with some tools you can use to fix some simple electronics"]
+								}] }
 							]
 						},
 						{
@@ -949,7 +977,15 @@
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "5ad1ab80-8dc0-11ec-8d05-6d8380a85712",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["5ad1ab80-8dc0-11ec-8d05-6d8380a85712"]
+								}] },
 								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
 							]
 						},
@@ -968,7 +1004,15 @@
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "61905ac0-8dc0-11ec-8d05-8b338850f6f6",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["61905ac0-8dc0-11ec-8d05-8b338850f6f6"]
+								}] },
 								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
 							]
 						},
@@ -1025,7 +1069,15 @@
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["c03adff0-8dc0-11ec-8d05-73ee068e5469"]
+								}] },
 								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
 							]
 						},
@@ -1101,7 +1153,35 @@
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [
+									{
+										"entityIid": "c68ffe50-8dc0-11ec-896a-0d6bc3a5c040",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "c5eabda0-8dc0-11ec-896a-6d255bb6e585",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "c517b630-8dc0-11ec-896a-399b52ab3f9a",
+										"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["c68ffe50-8dc0-11ec-896a-0d6bc3a5c040"]
+								}, {
+									"id": "V_String",
+									"params": ["c5eabda0-8dc0-11ec-896a-6d255bb6e585"]
+								}, {
+									"id": "V_String",
+									"params": ["c517b630-8dc0-11ec-896a-399b52ab3f9a"]
+								} ] },
 								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
 							]
 						},
@@ -1155,6 +1235,233 @@
 							"height": 16,
 							"defUid": 32,
 							"px": [256,144],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [11,33],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "184beb70-c640-11ed-8da3-1306cd0542c3",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [88,264],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								}] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [8,33],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "253cc160-c640-11ed-8da3-a57daf9a32ed",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [64,264],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "809742f0-8dc0-11ec-8e38-e7b7387010c4",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["809742f0-8dc0-11ec-8e38-e7b7387010c4"]
+								}] },
+								{ "__identifier": "anecdote", "__value": "another closet!", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["another closet!"]
+								}] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [19,30],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "46241b20-c640-11ed-8da3-e3ecc829b36f",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [152,240],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [ {
+									"entityIid": "aaf22380-8dc0-11ec-896a-630ce1fb8c0d",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}, {
+									"entityIid": "bdaa22f0-8dc0-11ec-8d05-7989e15605de",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["aaf22380-8dc0-11ec-896a-630ce1fb8c0d"]
+								}, {
+									"id": "V_String",
+									"params": ["bdaa22f0-8dc0-11ec-8d05-7989e15605de"]
+								} ] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [22,30],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "4dee9510-c640-11ed-8da3-8bd7735079f5",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [176,240],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
+								}] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [39,21],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "54307330-c640-11ed-8da3-975874a7c1c8",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [312,168],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [ {
+									"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}, {
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["de88dc90-8dc0-11ec-8e38-951ce47cb209"]
+								}, {
+									"id": "V_String",
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								} ] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [29,3],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "65e9a6a0-c640-11ed-8da3-5d056e88a751",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [232,24],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
+								}] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [33,42],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "cd1bf490-c640-11ed-8da3-250aab6809da",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [264,336],
+							"fieldInstances": [
+								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__value": [{
+									"entityIid": "2b392a00-8dc0-11ec-8d05-d335ccfd65a9",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["2b392a00-8dc0-11ec-8d05-d335ccfd65a9"]
+								}] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [36,42],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"iid": "ce1bb150-c640-11ed-8da3-e7a96dfa9eaf",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [288,336],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
@@ -1245,15 +1552,23 @@
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
 								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
-								{ "__identifier": "explorations", "__value": [{
+								{ "__identifier": "explorations", "__value": [ {
 									"entityIid": "82a86120-c640-11ed-b858-994c379495bf",
 									"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
 									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
+								}, {
+									"entityIid": "65e9a6a0-c640-11ed-8da3-5d056e88a751",
+									"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["82a86120-c640-11ed-b858-994c379495bf"]
-								}] }
+								}, {
+									"id": "V_String",
+									"params": ["65e9a6a0-c640-11ed-8da3-5d056e88a751"]
+								} ] }
 							]
 						},
 						{
@@ -1627,15 +1942,35 @@
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
-								{ "__identifier": "explorations", "__value": [{
-									"entityIid": "a4601fb0-c640-11ed-b858-c1dff98862ee",
-									"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
+								{ "__identifier": "explorations", "__value": [
+									{
+										"entityIid": "a4601fb0-c640-11ed-b858-c1dff98862ee",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "253cc160-c640-11ed-8da3-a57daf9a32ed",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "184beb70-c640-11ed-8da3-1306cd0542c3",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["a4601fb0-c640-11ed-b858-c1dff98862ee"]
-								}] }
+								}, {
+									"id": "V_String",
+									"params": ["253cc160-c640-11ed-8da3-a57daf9a32ed"]
+								}, {
+									"id": "V_String",
+									"params": ["184beb70-c640-11ed-8da3-1306cd0542c3"]
+								} ] }
 							]
 						},
 						{
@@ -1767,15 +2102,35 @@
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
 								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
-								{ "__identifier": "explorations", "__value": [{
-									"entityIid": "ac73b090-c640-11ed-b858-e9ebe70d3edf",
-									"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
+								{ "__identifier": "explorations", "__value": [
+									{
+										"entityIid": "ac73b090-c640-11ed-b858-e9ebe70d3edf",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "46241b20-c640-11ed-8da3-e3ecc829b36f",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "4dee9510-c640-11ed-8da3-8bd7735079f5",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["ac73b090-c640-11ed-b858-e9ebe70d3edf"]
-								}] }
+								}, {
+									"id": "V_String",
+									"params": ["46241b20-c640-11ed-8da3-e3ecc829b36f"]
+								}, {
+									"id": "V_String",
+									"params": ["4dee9510-c640-11ed-8da3-8bd7735079f5"]
+								} ] }
 							]
 						},
 						{
@@ -2136,15 +2491,35 @@
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
-								{ "__identifier": "explorations", "__value": [{
-									"entityIid": "c4582ce0-c640-11ed-b858-eb09c097d976",
-									"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
+								{ "__identifier": "explorations", "__value": [
+									{
+										"entityIid": "c4582ce0-c640-11ed-b858-eb09c097d976",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "cd1bf490-c640-11ed-8da3-250aab6809da",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									},
+									{
+										"entityIid": "ce1bb150-c640-11ed-8da3-e7a96dfa9eaf",
+										"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+										"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+										"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+									}
+								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["c4582ce0-c640-11ed-b858-eb09c097d976"]
-								}] }
+								}, {
+									"id": "V_String",
+									"params": ["cd1bf490-c640-11ed-8da3-250aab6809da"]
+								}, {
+									"id": "V_String",
+									"params": ["ce1bb150-c640-11ed-8da3-e7a96dfa9eaf"]
+								} ] }
 							]
 						},
 						{
@@ -2342,15 +2717,23 @@
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
 								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
-								{ "__identifier": "explorations", "__value": [{
+								{ "__identifier": "explorations", "__value": [ {
 									"entityIid": "cf5c7510-c640-11ed-b858-2b5e6826e889",
 									"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
 									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
+								}, {
+									"entityIid": "54307330-c640-11ed-8da3-975874a7c1c8",
+									"layerIid": "012b9df0-c640-11ed-b858-0dba5f52b439",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["cf5c7510-c640-11ed-b858-2b5e6826e889"]
-								}] }
+								}, {
+									"id": "V_String",
+									"params": ["54307330-c640-11ed-8da3-975874a7c1c8"]
+								} ] }
 							]
 						},
 						{
