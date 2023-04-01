@@ -27,6 +27,7 @@
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
+    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "babel-loader": "^8.2.4",
@@ -66,6 +67,7 @@
     "@mui/material": "^5.5.3",
     "classnames": "^2.3.1",
     "d3-timer": "^3.0.1",
+    "styled-components": "^5.3.9",
     "zustand": "^4.3.6"
   }
 }

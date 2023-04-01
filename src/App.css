@@ -2,21 +2,13 @@ body, html {
   background-color: #282c34;
   color: white;
   width: 100%;
-  padding: 20px;
+  height: 100%;
   box-sizing: border-box;
 }
 
 #root {
   width: 100%;
-}
-
-.App {
-  text-align: center;
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  margin: auto;
-  gap: 30px;
+  height: 100%;
 }
 
 h2 {

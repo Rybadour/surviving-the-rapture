@@ -44,7 +44,7 @@ export type Room = RoomConfig & {
 export interface Exploration {
   items: ItemsByType;
   doorReveals: string[];
-  ancedote: string;
+  anecdote: string;
 }
 
 export enum RoomFeature {

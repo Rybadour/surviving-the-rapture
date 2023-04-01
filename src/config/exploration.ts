@@ -49,6 +49,7 @@ mapData.levels.forEach((level) => {
             .map(exploration => ({
               items: transformItemsFieldIntoMap(exploration.items),
               doorReveals: exploration.doorReveals.map(ref => getRoomIdFromRef(ref, layer)),
+              anecdote: exploration.anecdote,
             })),
         };
       });
