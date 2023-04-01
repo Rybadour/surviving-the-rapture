@@ -1,6 +1,7 @@
 import { MyCreateSlice } from ".";
 import { Room } from "../shared/types";
 import roomConfig from "../config/exploration";
+import { InventorySlice } from "./inventory";
 
 export interface ExplorationSlice {
   isExploring: boolean;
@@ -28,7 +29,8 @@ Object.keys(roomConfig).forEach((roomId) => {
   };
 });
 
-const createExplorationSlice: MyCreateSlice<ExplorationSlice, []> = (set, get) => {
+const createExplorationSlice: MyCreateSlice<ExplorationSlice, [() => InventorySlice]> =
+(set, get, inventory) => {
   return {
     isExploring: false,
     progress: 0,
@@ -66,14 +68,18 @@ const createExplorationSlice: MyCreateSlice<ExplorationSlice, []> = (set, get) =
       };
       newRooms[room.id] = newRoom;
 
+      const exploration = newRoom.explorations[room.currentChunks];
+      exploration.doorReveals.forEach((roomId) => {
+        newRooms[roomId] = {
+          ...newRooms[roomId],
+          isDiscovered: true,
+        };
+      });
+
+      inventory().addItems(exploration.items);
+
       if (newRoom.currentChunks >= newRoom.explorations.length) {
         newRoom.isExplored = true;
-        room.connectedRooms.forEach((roomId) => {
-          newRooms[roomId] = {
-            ...newRooms[roomId],
-            isDiscovered: true,
-          };
-        });
       }
 
       set({

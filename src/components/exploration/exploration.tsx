@@ -54,10 +54,9 @@ export function Exploration() {
 
                       <div className="progress-details">
                         <div className="number">
-                          {(room.isExplored ? 100 : (room.currentProgress * 100).toFixed(0))}
+                          {(room.isExplored ? 100 : formatNumber(getRoomProgress(room), 0, 0))}
                           % explored
                         </div>
-                        {room.isExplored ? null : <ProgressBar progress={room.currentProgress} />}
                       </div>
                     </div>
                   </React.Fragment>
@@ -80,6 +79,7 @@ export function Exploration() {
                     height: room.height,
                   }}
                 >
+                  <div className="room-progress" style={{width: getRoomProgress(room) + "%"}}></div>
                   <div className="label">{room.mapLabel}</div>
                 </div>
               </RaptureTooltip>
@@ -106,7 +106,7 @@ function RoomDetails(props: { room: Room; exploration: ExplorationSlice; onExplo
     <div>
       <span>Lights: {props.room.hasLighting ? "On" : "Off (4x exploration time)"}</span>
     </div>
-    <div>{formatNumber(props.room.currentChunks/props.room.explorations.length * 100, 0, 0)}% Explored</div>
+    <div>{formatNumber(getRoomProgress(props.room), 0, 0)}% Explored</div>
     {props.room.isExplored ? <>
       {props.room.feature == RoomFeature.Workbench ? <Workbench /> : null}
     </> : null}
@@ -122,4 +122,8 @@ function RoomDetails(props: { room: Room; exploration: ExplorationSlice; onExplo
       </>
     ) : null}
   </>;
+}
+
+function getRoomProgress(room: Room) {
+  return room.currentChunks / room.explorations.length * 100
 }

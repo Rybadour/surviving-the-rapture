@@ -1,13 +1,13 @@
 import * as d3 from "d3-timer";
 
-import { ExplorationContext } from "../contexts/exploration";
-import { InventoryContext } from "../contexts/inventory";
-import { Room, RoomConfig } from "../shared/types";
+import { Room } from "../shared/types";
+import { ExplorationSlice } from "../store/exploration";
+import { InventorySlice } from "../store/inventory";
 
 const explorationTimeFactor = 0.05;
 const unlitTimeFactor = 4;
 
-export function startExploring(inventory: InventoryContext, exploration: ExplorationContext, room: Room) {
+export function startExploring(inventory: InventorySlice, exploration: ExplorationSlice, room: Room) {
   exploration.startExploring(room);
 
   return new Promise((resolve, reject) => {
@@ -20,8 +20,6 @@ export function startExploring(inventory: InventoryContext, exploration: Explora
         exploration.updateProgress(room, elapsed / maxTime);
         return;
       }
-
-      inventory.addItems(room.loot);
 
       timer.stop();
       exploration.completeExploring(room);

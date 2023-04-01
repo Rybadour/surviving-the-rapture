@@ -17,7 +17,7 @@ const useStore = create<FullStore>((set, get) => {
   const workbench = createLens(set, get, 'workbench');
 
   return {
-    exploration: createExplorationSlice(...exploration),
+    exploration: createExplorationSlice(...exploration, inventory[1]),
     inventory: createInventorySlice(...inventory),
     workbench: createWorkbenchSlice(...workbench),
   }

@@ -34,6 +34,7 @@ h2 {
 }
 .room .label {
   font-weight: bold;
+  z-index: 1;
 }
 .room.selected {
   box-shadow: 0px 0px 5px 2px white;
@@ -53,8 +54,16 @@ h2 {
     #333 10px
   );
 }
-.room.explored {
+.room.explored, .room .room-progress {
   background: #44657a;
+}
+
+.room .room-progress {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
 }
 
 .room-details {
