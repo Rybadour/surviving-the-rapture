@@ -11,7 +11,7 @@
 	"iid": "0b9ff8a0-c640-11ed-8da3-e7ff4694b576",
 	"jsonVersion": "1.2.5",
 	"appBuildId": 464870,
-	"nextUid": 39,
+	"nextUid": 44,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -380,38 +380,6 @@
 					"tilesetUid": null
 				},
 				{
-					"identifier": "unlockPowerRequired",
-					"doc": null,
-					"__type": "Int",
-					"uid": 21,
-					"type": "F_Int",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorLinkStyle": "StraightArrow",
-					"editorAlwaysShow": false,
-					"editorShowInWorld": true,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": { "id": "V_Int", "params": [100] },
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				},
-				{
 					"identifier": "capacityItems",
 					"doc": null,
 					"__type": "Array<String>",
@@ -473,6 +441,70 @@
 					"allowOutOfLevelRef": false,
 					"allowedRefs": "OnlyTags",
 					"allowedRefTags": ["exploration"],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "unlockPowerRequired",
+					"doc": null,
+					"__type": "Int",
+					"uid": 21,
+					"type": "F_Int",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "unlockItemRequired",
+					"doc": null,
+					"__type": "LocalEnum.Items",
+					"uid": 43,
+					"type": "F_Enum(4)",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
 					"tilesetUid": null
 				}
 			]
@@ -632,6 +664,38 @@
 					"allowedRefs": "OnlySame",
 					"allowedRefTags": [],
 					"tilesetUid": null
+				},
+				{
+					"identifier": "isImportantDiscovery",
+					"doc": null,
+					"__type": "Bool",
+					"uid": 39,
+					"type": "F_Bool",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefTags": [],
+					"tilesetUid": null
 				}
 			]
 		}
@@ -656,7 +720,8 @@
 			{ "id": "Workbench", "tileId": null, "color": 0, "__tileSrcRect": null },
 			{ "id": "Trucks", "tileId": null, "color": 0, "__tileSrcRect": null },
 			{ "id": "Elevator", "tileId": null, "color": 0, "__tileSrcRect": null }
-		], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }
+		], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
+		{ "identifier": "LockCondition", "uid": 40, "values": [ { "id": "ItemFound", "tileId": null, "color": 12470831, "__tileSrcRect": null }, { "id": "PowerCapacity", "tileId": null, "color": 14120515, "__tileSrcRect": null } ], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }
 	], "externalEnums": [], "levelFields": [] },
 	"levels": [
 		{
@@ -729,7 +794,8 @@
 								{ "__identifier": "anecdote", "__value": "you find a some junk... useful junk?", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["you find a some junk... useful junk?"]
-								}] }
+								}] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -770,7 +836,8 @@
 								{ "__identifier": "anecdote", "__value": "you spot a closet and a hallway to the right.", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["you spot a closet and a hallway to the right."]
-								}] }
+								}] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -811,7 +878,8 @@
 								{ "__identifier": "anecdote", "__value": "some machine parts, another closet, and another hallway!", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["some machine parts, another closet, and another hallway!"]
-								}] }
+								}] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -833,7 +901,8 @@
 									"params": ["ScrapMetal"]
 								}] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -855,7 +924,8 @@
 								{ "__identifier": "anecdote", "__value": "Just useless junk as far as the eye can see", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Just useless junk as far as the eye can see"]
-								}] }
+								}] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -882,7 +952,8 @@
 									"id": "V_String",
 									"params": ["a6cd79b0-8dc0-11ec-8d05-2d63cbc9cf5f"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -899,7 +970,10 @@
 							"px": [16,184],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Wires"]
+								}] },
 								{ "__identifier": "doorReveals", "__value": [{
 									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
@@ -909,7 +983,8 @@
 									"id": "V_String",
 									"params": ["8f243220-8dc0-11ec-8e38-e70cb4129eca"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -940,6 +1015,10 @@
 								{ "__identifier": "anecdote", "__value": "looks like a workbench with some tools you can use to fix some simple electronics", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["looks like a workbench with some tools you can use to fix some simple electronics"]
+								}] },
+								{ "__identifier": "isImportantDiscovery", "__value": true, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
 								}] }
 							]
 						},
@@ -957,9 +1036,16 @@
 							"px": [96,176],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [ "Wires", "BrokenFlashlight" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["Wires"]
+								}, {
+									"id": "V_String",
+									"params": ["BrokenFlashlight"]
+								} ] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -986,7 +1072,8 @@
 									"id": "V_String",
 									"params": ["5ad1ab80-8dc0-11ec-8d05-6d8380a85712"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1013,7 +1100,8 @@
 									"id": "V_String",
 									"params": ["61905ac0-8dc0-11ec-8d05-8b338850f6f6"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1032,7 +1120,8 @@
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1049,9 +1138,13 @@
 							"px": [96,8],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": ["LightBulb"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["LightBulb"]
+								}] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1078,7 +1171,8 @@
 									"id": "V_String",
 									"params": ["c03adff0-8dc0-11ec-8d05-73ee068e5469"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1095,9 +1189,13 @@
 							"px": [240,336],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": ["MachineParts"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["MachineParts"]
+								}] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1114,14 +1212,18 @@
 							"px": [200,296],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Wires"]
+								}] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
 							"__identifier": "Exploration",
-							"__grid": [31,20],
+							"__grid": [29,23],
 							"__pivot": [0,0],
 							"__tags": ["exploration"],
 							"__tile": null,
@@ -1130,17 +1232,24 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 32,
-							"px": [248,160],
+							"px": [232,184],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [ "Wires", "LightBulb" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["Wires"]
+								}, {
+									"id": "V_String",
+									"params": ["LightBulb"]
+								} ] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
 							"__identifier": "Exploration",
-							"__grid": [39,24],
+							"__grid": [39,18],
 							"__pivot": [0,0],
 							"__tags": ["exploration"],
 							"__tile": null,
@@ -1149,7 +1258,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 32,
-							"px": [312,192],
+							"px": [312,144],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
@@ -1182,7 +1291,8 @@
 									"id": "V_String",
 									"params": ["c517b630-8dc0-11ec-896a-399b52ab3f9a"]
 								} ] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1201,7 +1311,8 @@
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1218,9 +1329,13 @@
 							"px": [256,120],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Wires"]
+								}] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1239,7 +1354,8 @@
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
 								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1256,17 +1372,22 @@
 							"px": [88,264],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [{
-									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
-									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
-									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
-									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+								{ "__identifier": "items", "__value": [ "ScrapElectronics", "ScrapMetal", "ScrapMetal", "Wires" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
 									"id": "V_String",
-									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
-								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+									"params": ["ScrapElectronics"]
+								}, {
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								}, {
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								}, {
+									"id": "V_String",
+									"params": ["Wires"]
+								} ] },
+								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1283,20 +1404,32 @@
 							"px": [64,264],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
-								{ "__identifier": "doorReveals", "__value": [{
+								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Wires"]
+								}] },
+								{ "__identifier": "doorReveals", "__value": [ {
 									"entityIid": "809742f0-8dc0-11ec-8e38-e7b7387010c4",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
 									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
 									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
-								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [{
+								}, {
+									"entityIid": "cf2e64b0-8dc0-11ec-8d05-b14028017249",
+									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
+									"levelIid": "de886760-8dc0-11ec-8e38-15983283e52d",
+									"worldIid": "0ba10a10-c640-11ed-8da3-91fe136ee162"
+								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["809742f0-8dc0-11ec-8e38-e7b7387010c4"]
-								}] },
+								}, {
+									"id": "V_String",
+									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
+								} ] },
 								{ "__identifier": "anecdote", "__value": "another closet!", "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["another closet!"]
-								}] }
+								}] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1331,7 +1464,8 @@
 									"id": "V_String",
 									"params": ["bdaa22f0-8dc0-11ec-8d05-7989e15605de"]
 								} ] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1358,7 +1492,8 @@
 									"id": "V_String",
 									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1375,7 +1510,10 @@
 							"px": [312,168],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": ["ScrapMetal"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								}] },
 								{ "__identifier": "doorReveals", "__value": [ {
 									"entityIid": "de88dc90-8dc0-11ec-8e38-951ce47cb209",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
@@ -1393,7 +1531,8 @@
 									"id": "V_String",
 									"params": ["cf2e64b0-8dc0-11ec-8d05-b14028017249"]
 								} ] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1420,7 +1559,8 @@
 									"id": "V_String",
 									"params": ["c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1437,7 +1577,13 @@
 							"px": [264,336],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [ "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["Wires"]
+								}, {
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								} ] },
 								{ "__identifier": "doorReveals", "__value": [{
 									"entityIid": "2b392a00-8dc0-11ec-8d05-d335ccfd65a9",
 									"layerIid": "de88b580-8dc0-11ec-8e38-652e14962be1",
@@ -1447,7 +1593,8 @@
 									"id": "V_String",
 									"params": ["2b392a00-8dc0-11ec-8d05-d335ccfd65a9"]
 								}] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1464,9 +1611,19 @@
 							"px": [288,336],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "items", "__value": [ "Battery", "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["Battery"]
+								}, {
+									"id": "V_String",
+									"params": ["Wires"]
+								}, {
+									"id": "V_String",
+									"params": ["ScrapMetal"]
+								} ] },
 								{ "__identifier": "doorReveals", "__value": [], "__type": "Array<EntityRef>", "__tile": null, "defUid": 36, "realEditorValues": [] },
-								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] }
+								{ "__identifier": "anecdote", "__value": null, "__type": "String", "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__value": false, "__type": "Bool", "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						}
 					]
@@ -1550,7 +1707,6 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [ {
 									"entityIid": "82a86120-c640-11ed-b858-994c379495bf",
@@ -1568,7 +1724,9 @@
 								}, {
 									"id": "V_String",
 									"params": ["65e9a6a0-c640-11ed-8da3-5d056e88a751"]
-								} ] }
+								} ] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1590,10 +1748,7 @@
 									"params": ["Closet"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": ["ScrapMetal"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["ScrapMetal"]
-								}] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
 								{ "__identifier": "connectedRooms", "__value": [{
 									"entityIid": "eff9e370-8dc0-11ec-8e38-b74cc005925c",
@@ -1606,7 +1761,6 @@
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "53363b10-c640-11ed-b858-4d1405938e5b",
@@ -1616,7 +1770,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["53363b10-c640-11ed-b858-4d1405938e5b"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1644,19 +1800,7 @@
 									"id": "V_String",
 									"params": ["GAR"]
 								}] },
-								{ "__identifier": "items", "__value": [ "Wires", "Wires", "ScrapMetal", "MachineParts" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
-									"id": "V_String",
-									"params": ["Wires"]
-								}, {
-									"id": "V_String",
-									"params": ["Wires"]
-								}, {
-									"id": "V_String",
-									"params": ["ScrapMetal"]
-								}, {
-									"id": "V_String",
-									"params": ["MachineParts"]
-								} ] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
 								{ "__identifier": "connectedRooms", "__value": [
 									{
@@ -1704,7 +1848,6 @@
 									"id": "V_String",
 									"params": ["Trucks"]
 								}] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [
 									{
@@ -1734,7 +1877,9 @@
 								}, {
 									"id": "V_String",
 									"params": ["e08f08d0-c640-11ed-b858-01f64efe5e9b"]
-								} ] }
+								} ] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1769,7 +1914,6 @@
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "6367e420-c640-11ed-b858-d94c38dbdf4d",
@@ -1779,7 +1923,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["6367e420-c640-11ed-b858-d94c38dbdf4d"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1801,13 +1947,7 @@
 									"params": ["Hallway"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [ "ScrapMetal", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
-									"id": "V_String",
-									"params": ["ScrapMetal"]
-								}, {
-									"id": "V_String",
-									"params": ["ScrapMetal"]
-								} ] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
 								{ "__identifier": "connectedRooms", "__value": [ {
 									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
@@ -1831,7 +1971,6 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "9cd0da00-c640-11ed-b858-65a1046afcc2",
@@ -1841,7 +1980,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["9cd0da00-c640-11ed-b858-65a1046afcc2"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1869,39 +2010,7 @@
 									"id": "V_String",
 									"params": ["WSHOP"]
 								}] },
-								{ "__identifier": "items", "__value": [
-									"Wires",
-									"Wires",
-									"ScrapMetal",
-									"ScrapElectronics",
-									"ScrapMetal",
-									"ScrapElectronics"
-								], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
-									{
-										"id": "V_String",
-										"params": ["Wires"]
-									},
-									{
-										"id": "V_String",
-										"params": ["Wires"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapMetal"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapElectronics"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapMetal"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapElectronics"]
-									}
-								] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
 								{ "__identifier": "connectedRooms", "__value": [
 									{
@@ -1940,7 +2049,6 @@
 									"id": "V_String",
 									"params": ["Workbench"]
 								}] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [
 									{
@@ -1970,7 +2078,9 @@
 								}, {
 									"id": "V_String",
 									"params": ["184beb70-c640-11ed-8da3-1306cd0542c3"]
-								} ] }
+								} ] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -1992,13 +2102,7 @@
 									"params": ["Closet"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [ "Wires", "BrokenFlashlight" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
-									"id": "V_String",
-									"params": ["Wires"]
-								}, {
-									"id": "V_String",
-									"params": ["BrokenFlashlight"]
-								} ] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
 								{ "__identifier": "connectedRooms", "__value": [{
 									"entityIid": "8f243220-8dc0-11ec-8e38-e70cb4129eca",
@@ -2011,7 +2115,6 @@
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "a8db4790-c640-11ed-b858-ff80e6587192",
@@ -2021,7 +2124,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["a8db4790-c640-11ed-b858-ff80e6587192"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2100,7 +2205,6 @@
 								] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [
 									{
@@ -2130,7 +2234,9 @@
 								}, {
 									"id": "V_String",
 									"params": ["4dee9510-c640-11ed-8da3-8bd7735079f5"]
-								} ] }
+								} ] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2173,7 +2279,6 @@
 								} ] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "b252ae30-c640-11ed-b858-0fde20579931",
@@ -2183,7 +2288,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["b252ae30-c640-11ed-b858-0fde20579931"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2308,7 +2415,6 @@
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "b6fe34e0-c640-11ed-b858-9338083c0234",
@@ -2318,7 +2424,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["b6fe34e0-c640-11ed-b858-9338083c0234"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2356,7 +2464,6 @@
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "bdc21440-c640-11ed-b858-4fd90ddc9462",
@@ -2366,7 +2473,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["bdc21440-c640-11ed-b858-4fd90ddc9462"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2409,7 +2518,6 @@
 								} ] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "c0eaa470-c640-11ed-b858-95bc3d7f4b5f",
@@ -2419,7 +2527,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c0eaa470-c640-11ed-b858-95bc3d7f4b5f"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2444,28 +2554,7 @@
 									"id": "V_String",
 									"params": ["EGEN"]
 								}] },
-								{ "__identifier": "items", "__value": [ "LightBulb", "MachineParts", "ScrapMetal", "ScrapMetal", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
-									{
-										"id": "V_String",
-										"params": ["LightBulb"]
-									},
-									{
-										"id": "V_String",
-										"params": ["MachineParts"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapMetal"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapMetal"]
-									},
-									{
-										"id": "V_String",
-										"params": ["ScrapMetal"]
-									}
-								] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 30, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [30] }] },
 								{ "__identifier": "connectedRooms", "__value": [ {
 									"entityIid": "2b392a00-8dc0-11ec-8d05-d335ccfd65a9",
@@ -2489,7 +2578,6 @@
 									"id": "V_String",
 									"params": ["BackupGenerator"]
 								}] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [
 									{
@@ -2519,7 +2607,9 @@
 								}, {
 									"id": "V_String",
 									"params": ["ce1bb150-c640-11ed-8da3-e7a96dfa9eaf"]
-								} ] }
+								} ] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2541,10 +2631,7 @@
 									"params": ["Closet"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["Wires"]
-								}] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 10, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [] },
 								{ "__identifier": "connectedRooms", "__value": [{
 									"entityIid": "c03adff0-8dc0-11ec-8d05-73ee068e5469",
@@ -2557,7 +2644,6 @@
 								}] },
 								{ "__identifier": "hasLighting", "__value": false, "__type": "Bool", "__tile": null, "defUid": 12, "realEditorValues": [] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "c886bb60-c640-11ed-b858-37a2241270f6",
@@ -2567,7 +2653,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["c886bb60-c640-11ed-b858-37a2241270f6"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2611,7 +2699,6 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "cc2713a0-c640-11ed-b858-15b9ab654adb",
@@ -2621,7 +2708,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["cc2713a0-c640-11ed-b858-15b9ab654adb"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2643,19 +2732,7 @@
 									"params": ["Elevator Lobby"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [ "ScrapMetal", "ScrapElectronics", "Wires", "Wires" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [ {
-									"id": "V_String",
-									"params": ["ScrapMetal"]
-								}, {
-									"id": "V_String",
-									"params": ["ScrapElectronics"]
-								}, {
-									"id": "V_String",
-									"params": ["Wires"]
-								}, {
-									"id": "V_String",
-									"params": ["Wires"]
-								} ] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 20, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [20] }] },
 								{ "__identifier": "connectedRooms", "__value": [
 									{
@@ -2715,7 +2792,6 @@
 									"params": [ true ]
 								}] },
 								{ "__identifier": "feature", "__value": null, "__type": "LocalEnum.RoomFeatures", "__tile": null, "defUid": 14, "realEditorValues": [] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [ {
 									"entityIid": "cf5c7510-c640-11ed-b858-2b5e6826e889",
@@ -2733,7 +2809,9 @@
 								}, {
 									"id": "V_String",
 									"params": ["54307330-c640-11ed-8da3-975874a7c1c8"]
-								} ] }
+								} ] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2774,7 +2852,6 @@
 									"id": "V_String",
 									"params": ["Elevator"]
 								}] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "e3ef7c70-c640-11ed-b858-d538d69be675",
@@ -2784,7 +2861,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["e3ef7c70-c640-11ed-b858-d538d69be675"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2806,10 +2885,7 @@
 									"params": ["Elevator 2"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": ["Wires"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["Wires"]
-								}] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
 								{ "__identifier": "connectedRooms", "__value": [{
 									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
@@ -2828,7 +2904,6 @@
 									"id": "V_String",
 									"params": ["Elevator"]
 								}] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "65676830-c640-11ed-b858-3d53477bc31f",
@@ -2838,7 +2913,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["65676830-c640-11ed-b858-3d53477bc31f"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2860,10 +2937,7 @@
 									"params": ["Elevator 1"]
 								}] },
 								{ "__identifier": "mapLabel", "__value": null, "__type": "String", "__tile": null, "defUid": 22, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": ["ScrapMetal"], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["ScrapMetal"]
-								}] },
+								{ "__identifier": "items", "__value": [], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [] },
 								{ "__identifier": "exploreTime", "__value": 5, "__type": "Int", "__tile": null, "defUid": 9, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
 								{ "__identifier": "connectedRooms", "__value": [{
 									"entityIid": "c0fd4bf0-8dc0-11ec-896a-21e26d66ffcc",
@@ -2882,7 +2956,6 @@
 									"id": "V_String",
 									"params": ["Elevator"]
 								}] },
-								{ "__identifier": "unlockPowerRequired", "__value": 100, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
 								{ "__identifier": "capacityItems", "__value": [], "__type": "Array<String>", "__tile": null, "defUid": 23, "realEditorValues": [] },
 								{ "__identifier": "explorations", "__value": [{
 									"entityIid": "67d2c2e0-c640-11ed-b858-899e7872364d",
@@ -2892,7 +2965,9 @@
 								}], "__type": "Array<EntityRef>", "__tile": null, "defUid": 34, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["67d2c2e0-c640-11ed-b858-899e7872364d"]
-								}] }
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__value": null, "__type": "Int", "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__value": null, "__type": "LocalEnum.Items", "__tile": null, "defUid": 43, "realEditorValues": [] }
 							]
 						}
 					]
