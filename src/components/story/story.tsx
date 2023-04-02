@@ -7,9 +7,10 @@ export default function Story() {
   return <Container>
     <Inner>
     {story.entries
+      .map((entry, i) => ({index: i, entry: entry}))
       .reverse()
-      .map((entry) => 
-        <Entry key={entry.id} isImportant={entry.isImportant}>{entry.text}</Entry>
+      .map(({index, entry}) => 
+        <Entry key={index} isImportant={entry.isImportant}>{entry.text}</Entry>
       )}
     </Inner>
   </Container>;
