@@ -80,7 +80,7 @@ const createExplorationSlice: MyCreateSlice<ExplorationSlice, [() => InventorySl
       inventory().addItems(exploration.items);
 
       if (exploration.anecdote) {
-        story().addStoryEntry(exploration.anecdote);
+        story().addStoryEntry(exploration.anecdote, exploration.isImportant);
       }
 
       if (newRoom.currentChunks >= newRoom.explorations.length) {

@@ -1,17 +1,26 @@
 import { MyCreateSlice } from ".";
 
-export interface StorySlice {
-  entries: string[],
+export interface StoryEntry {
+  id: number;
+  text: string;
+  isImportant: boolean;
+}
 
-  addStoryEntry: (text: string) => void,
+export interface StorySlice {
+  entries: StoryEntry[],
+
+  addStoryEntry: (text: string, isImportant: boolean) => void,
 }
 
 const createStorySlice: MyCreateSlice<StorySlice, []> = (set, get) => {
   return {
     entries: [],
 
-    addStoryEntry: (text: string) => {
-      set({ entries: [...get().entries, text] });
+    addStoryEntry: (text: string, isImportant: boolean) => {
+      const newEntries = [ ...get().entries ];
+      const newEntry = { text, isImportant, id: newEntries.length };
+      newEntries.push(newEntry);
+      set({ entries: newEntries });
     },
   };
 };

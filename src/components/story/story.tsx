@@ -5,23 +5,34 @@ export default function Story() {
   const story = useStore(s => s.story);
 
   return <Container>
+    <Inner>
     {story.entries
-      .map((entry, i) => [i, entry])
       .reverse()
-      .map(([i, entry]) => 
-        <div key={i}>{entry}</div>
+      .map((entry) => 
+        <Entry key={entry.id} isImportant={entry.isImportant}>{entry.text}</Entry>
       )}
+    </Inner>
   </Container>;
 }
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 180px;
   height: 100%;
   text-align: left;
   background-color: black;
   color: grey;
-  gap: 5px;
-  padding: 10px 5px 10px 10px;
+`;
+
+const Inner = styled.div`
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const Entry = styled.div<{isImportant: boolean}>`
+  ${p => p.isImportant ? `
+    color: #999;
+    font-weight: bold;
+  ` : null}
 `;

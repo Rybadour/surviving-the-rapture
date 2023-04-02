@@ -45,6 +45,7 @@ export interface Exploration {
   items: ItemsByType;
   doorReveals: string[];
   anecdote: string;
+  isImportant: boolean;
 }
 
 export enum RoomFeature {
