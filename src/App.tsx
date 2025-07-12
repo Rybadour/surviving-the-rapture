@@ -10,10 +10,10 @@ function App() {
   return (
     <AppContainer>
       <Story />
-      <MainContent>
+      <div className="flex gap-8 p-5 w-full">
         <Exploration />
         <Inventory />
-      </MainContent>
+      </div>
     </AppContainer>
   );
 }
@@ -25,12 +25,6 @@ const AppContainer = styled.div`
   width: 100%;
   height: 100%;
   gap: 30px;
-`;
-
-const MainContent = styled.div`
-  display: flex;
-  padding: 20px;
-  width: 100%;
 `;
 
 export default App;

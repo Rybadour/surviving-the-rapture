@@ -33,7 +33,7 @@ export function Exploration() {
 
   return (
     <div className="exploration">
-      <h2 className="text-2xl">Exploration</h2>
+      <h2 className="text-2xl mb-4">Exploration</h2>
       <div className="exploration-container">
         <div className="map">
           {Object.entries(exploration.rooms)
