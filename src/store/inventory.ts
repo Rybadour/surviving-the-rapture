@@ -14,6 +14,7 @@ export interface InventorySlice {
   canAffordItem: (item: ItemType, quantity: number) => boolean,
   canAffordItems: (items: Map<ItemType, number>) => boolean,
   craftRecipe: (recipe: Recipe) => void,
+  useFlashlight: (elapsed: number) => number,
 }
 
 const createInventorySlice: MyCreateSlice<InventorySlice, []> = (set, get) => {
@@ -53,10 +54,20 @@ const createInventorySlice: MyCreateSlice<InventorySlice, []> = (set, get) => {
       if ("item" in recipe.result) {
         addItem(itemsCopy, recipe.result.item, 1);
       } else if ("feature" in recipe.result) {
-        set({ flashlight: { found: true, battery: 30 }});
+        if (recipe.result.feature === 'flashlight') {
+          set({ flashlight: { found: true, battery: 10 }});
+        }
       }
       set({ items: itemsCopy});
     },
+
+    useFlashlight: (elapsed) => {
+      const flashlight = {...get().flashlight};
+      flashlight.battery = Math.max(0, flashlight.battery - elapsed);
+
+      set({ flashlight });
+      return flashlight.battery;
+    }
   };
 };
 

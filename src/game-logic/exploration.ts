@@ -11,11 +11,21 @@ export function startExploring(inventory: InventorySlice, exploration: Explorati
   exploration.startExploring(room);
 
   return new Promise((resolve, reject) => {
+    let lastElapsed = 0;
+    let lastBattery = inventory.flashlight.battery;
     const timer = d3.timer((elapsed: number) => {
+      const delta = (elapsed - lastElapsed)/1000;
+      lastElapsed = elapsed;
+
       let maxTime = room.explorationTime * 1000 * explorationTimeFactor;
       if (!room.hasLighting) {
-        maxTime *= unlitTimeFactor;
+        if (!inventory.flashlight.found || lastBattery <= 0) {
+          maxTime *= unlitTimeFactor;
+        } else {
+          lastBattery = inventory.useFlashlight(delta);
+        }
       }
+
       if (elapsed < maxTime) {
         exploration.updateProgress(room, elapsed / maxTime);
         return;
