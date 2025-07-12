@@ -8,7 +8,7 @@ export function Inventory() {
     const inventory = useStore(s => s.inventory);
 
     return <div className="inventory">
-      <h2>Inventory</h2>
+      <h2 className="text-2xl">Inventory</h2>
 
       <div className="">
         <div className=""></div>
