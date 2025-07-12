@@ -701,7 +701,6 @@
 		}
 	], "tilesets": [], "enums": [
 		{ "identifier": "Items", "uid": 4, "values": [
-			{ "id": "Battery", "tileId": null, "color": 0, "__tileSrcRect": null },
 			{ "id": "BrokenFlashlight", "tileId": null, "color": 0, "__tileSrcRect": null },
 			{ "id": "CPU", "tileId": null, "color": 0, "__tileSrcRect": null },
 			{ "id": "GasCan", "tileId": null, "color": 0, "__tileSrcRect": null },
@@ -713,7 +712,12 @@
 			{ "id": "RubberHose", "tileId": null, "color": 0, "__tileSrcRect": null },
 			{ "id": "ScrapElectronics", "tileId": null, "color": 0, "__tileSrcRect": null },
 			{ "id": "ScrapMetal", "tileId": null, "color": 0, "__tileSrcRect": null },
-			{ "id": "Wires", "tileId": null, "color": 0, "__tileSrcRect": null }
+			{ "id": "Wires", "tileId": null, "color": 0, "__tileSrcRect": null },
+			{ "id": "EmptyBattery", "tileId": null, "color": 12470831, "__tileSrcRect": null },
+			{ "id": "Charge1Battery", "tileId": null, "color": 12470831, "__tileSrcRect": null },
+			{ "id": "Charge2Battery", "tileId": null, "color": 12470831, "__tileSrcRect": null },
+			{ "id": "Charge3Battery", "tileId": null, "color": 12470831, "__tileSrcRect": null },
+			{ "id": "Charge4Battery", "tileId": null, "color": 12470831, "__tileSrcRect": null }
 		], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
 		{ "identifier": "RoomFeatures", "uid": 13, "values": [
 			{ "id": "BackupGenerator", "tileId": null, "color": 0, "__tileSrcRect": null },
@@ -1611,9 +1615,9 @@
 							"px": [288,336],
 							"fieldInstances": [
 								{ "__identifier": "time", "__value": 10, "__type": "Int", "__tile": null, "defUid": 33, "realEditorValues": [] },
-								{ "__identifier": "items", "__value": [ "Battery", "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
+								{ "__identifier": "items", "__value": [ "Charge1Battery", "Wires", "ScrapMetal" ], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 35, "realEditorValues": [ {
 									"id": "V_String",
-									"params": ["Battery"]
+									"params": ["Charge1Battery"]
 								}, {
 									"id": "V_String",
 									"params": ["Wires"]
@@ -2316,8 +2320,8 @@
 									"params": ["STORE"]
 								}] },
 								{ "__identifier": "items", "__value": [
-									"Battery",
-									"Battery",
+									"Charge1Battery",
+									"Charge1Battery",
 									"RechargeableBattery",
 									"RubberHose",
 									"ScrapElectronics",
@@ -2336,11 +2340,11 @@
 								], "__type": "Array<LocalEnum.Items>", "__tile": null, "defUid": 7, "realEditorValues": [
 									{
 										"id": "V_String",
-										"params": ["Battery"]
+										"params": ["Charge1Battery"]
 									},
 									{
 										"id": "V_String",
-										"params": ["Battery"]
+										"params": ["Charge1Battery"]
 									},
 									{
 										"id": "V_String",

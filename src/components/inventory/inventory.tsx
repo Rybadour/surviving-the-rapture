@@ -10,6 +10,10 @@ export function Inventory() {
     return <div className="inventory">
       <h2>Inventory</h2>
 
+      <div className="">
+        <div className=""></div>
+      </div>
+
       <div className="inventory-grid">
         {Array.from(inventory.items, ([item, quantity]) => 
           <Tooltip key={item} placement="bottom" arrow title={item}>

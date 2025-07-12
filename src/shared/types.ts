@@ -57,5 +57,7 @@ export interface Recipe {
   feature: RoomFeature;
   durationSec: number;
   consumedItems: Map<ItemType, number>;
-  producedItem: ItemType;
+  result: { item: ItemType } | { feature: SpecialFeature };
 }
+
+export type SpecialFeature = 'flashlight' | 'flashlight-battery';

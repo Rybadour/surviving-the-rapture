@@ -5,6 +5,10 @@ export type ItemsByType = Map<ItemType, number>;
 
 export interface InventorySlice {
   items: ItemsByType,
+  flashlight: {
+    found: boolean,
+    battery: number,
+  },
 
   addItems: (newItems: ItemsByType) => void,
   canAffordItem: (item: ItemType, quantity: number) => boolean,
@@ -20,6 +24,10 @@ const createInventorySlice: MyCreateSlice<InventorySlice, []> = (set, get) => {
 
   return {
     items: new Map(),
+    flashlight: {
+      found: false,
+      battery: 0,
+    },
 
     addItems: (newItems: ItemsByType) => {
       const itemsCopy = new Map(get().items);
@@ -38,10 +46,15 @@ const createInventorySlice: MyCreateSlice<InventorySlice, []> = (set, get) => {
 
     craftRecipe: (recipe: Recipe) => {
       const itemsCopy = new Map(get().items);
-      addItem(itemsCopy, recipe.producedItem, 1);
       Array.from(recipe.consumedItems).forEach(([item, quantity]) => 
         removeItem(itemsCopy, item, quantity)
       );
+
+      if ("item" in recipe.result) {
+        addItem(itemsCopy, recipe.result.item, 1);
+      } else if ("feature" in recipe.result) {
+        set({ flashlight: { found: true, battery: 30 }});
+      }
       set({ items: itemsCopy});
     },
   };

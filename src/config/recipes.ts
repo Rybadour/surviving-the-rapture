@@ -10,7 +10,7 @@ const recipes: Record<string, Recipe> = {
       [ItemType.LightBulb, 1],
       [ItemType.Wires, 4]
     ]),
-    producedItem: ItemType.Flashlight,
+    result: { feature: 'flashlight' },
   } 
 };
 
