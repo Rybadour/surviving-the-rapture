@@ -3,12 +3,17 @@ import * as d3 from "d3-timer";
 import { Room } from "../shared/types";
 import { ExplorationSlice } from "../store/exploration";
 import { InventorySlice } from "../store/inventory";
+import globals from "../config/global";
 
 const explorationTimeFactor = 0.05;
 const unlitTimeFactor = 4;
 
 export function startExploring(inventory: InventorySlice, exploration: ExplorationSlice, room: Room) {
   exploration.startExploring(room);
+  if (globals.TURBO_MODE) {
+    exploration.completeExploring(room);
+    return;
+  }
 
   return new Promise((resolve, reject) => {
     let lastElapsed = 0;

@@ -20,7 +20,7 @@ export function getItemIcon(item: ItemType): string {
       return 'icons/light-bulb.png'; 
     case ItemType.GasCan:
       return 'icons/jerrycan.png';
-    case ItemType.Battery:
+    case ItemType.AAA_Battery:
       return 'icons/batteries.png';
     case ItemType.RechargeableBattery:
       return 'icons/charging.png';

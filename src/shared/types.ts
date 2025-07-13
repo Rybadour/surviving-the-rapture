@@ -1,7 +1,7 @@
 import { ItemsByType } from "../contexts/inventory";
 
 export enum ItemType {
-  Battery = "Battery",
+  AAA_Battery = "AAA_Battery",
   BrokenFlashlight = "BrokenFlashlight",
   CPU = "CPU",
   Flashlight = "Flashlight",
