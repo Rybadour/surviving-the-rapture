@@ -1,5 +1,4 @@
 import { Tooltip } from '@mui/material';
-import React, { useContext } from 'react';
 import { getItemIcon } from '../../shared/item-helper';
 import useStore from '../../store';
 import './inventory.css';
@@ -28,14 +27,16 @@ export function Inventory() {
       </div>
 
       <div className="inventory-grid justify-center">
-        {Array.from(items, ([item, quantity]) => 
-          <Tooltip key={item} placement="bottom" arrow title={item}>
-            <div className="item">
-              <img src={getItemIcon(item)} />
-              <span className="quantity">{quantity.toLocaleString()}</span>
-            </div>
-          </Tooltip>
-        )}
+        {Array.from(items)
+          .filter(([_, quantity]) => quantity > 0)
+          .map(([item, quantity]) =>
+            <Tooltip key={item} placement="bottom" arrow title={item}>
+              <div className="item">
+                <img src={getItemIcon(item)} />
+                <span className="quantity">{quantity.toLocaleString()}</span>
+              </div>
+            </Tooltip>
+          )}
       </div>
     </div>;
 }
