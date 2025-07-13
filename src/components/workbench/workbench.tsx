@@ -4,8 +4,8 @@ import { Button, Tooltip } from "@mui/material";
 import classNames from "classnames";
 
 import './workbench.scss';
-import recipes from "../../config/recipes";
-import { Recipe, RoomFeature } from "../../shared/types";
+import { recipes, Recipe } from "../../config/recipes";
+import { RoomFeature } from "../../shared/types";
 import { craftRecipe } from "../../game-logic/crafting";
 import { ProgressBar } from "../progress-bar/progress-bar";
 import { getItemIcon } from "../../shared/item-helper";
@@ -24,7 +24,10 @@ export function Workbench() {
 
       <div className="recipes">
         {Object.entries(recipes)
-        .filter(([key, recipe]) => recipe.feature == RoomFeature.Workbench)
+        .filter(([key, recipe]) => 
+          recipe.feature == RoomFeature.Workbench &&
+          recipe.limit > (workbench.numCrafts[recipe.id] ?? 0)
+        )
         .map(([key, recipe]) => 
           <div key={key} className="recipe">
             <div className="name">{recipe.name}</div>

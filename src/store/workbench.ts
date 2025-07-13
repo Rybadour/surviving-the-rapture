@@ -1,9 +1,10 @@
 import { MyCreateSlice } from ".";
-import { Recipe } from "../shared/types";
+import { RecipeId, Recipe } from "../config/recipes";
 
 export interface WorkbenchSlice {
   isCrafting: boolean,
   progress: number,
+  numCrafts: Partial<Record<RecipeId, number>>,
 
   startCraft: (recipe: Recipe) => void,
   endCraft: (recipe: Recipe) => void,
@@ -14,13 +15,21 @@ const createWorkbenchSlice: MyCreateSlice<WorkbenchSlice, []> = (set, get) => {
   return {
     isCrafting: false,
     progress: 0,
+    numCrafts: {},
 
     startCraft: (recipe: Recipe) => {
       set({ isCrafting: true });
     },
 
     endCraft: (recipe: Recipe) => {
-      set({ isCrafting: false });
+      const numCrafts = get().numCrafts;
+      const id = recipe.id;
+      if (numCrafts[id]) {
+        numCrafts[id] += 1;
+      } else {
+        numCrafts[id] = 1
+      }
+      set({ isCrafting: false, numCrafts });
     },
 
     setProgress: (progress: number) => {

@@ -1,5 +1,6 @@
 import { MyCreateSlice } from ".";
-import { ItemType, Recipe } from "../shared/types";
+import { Recipe } from "../config/recipes";
+import { ItemType } from "../shared/types";
 
 export type ItemsByType = Map<ItemType, number>;
 

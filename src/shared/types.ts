@@ -52,11 +52,12 @@ export enum RoomFeature {
   Workbench = "Workbench",
 }
 
-export interface Recipe {
+export interface RecipeWithoutId {
   name: string;
   feature: RoomFeature;
   durationSec: number;
   consumedItems: Map<ItemType, number>;
+  limit: number;
   result: { item: ItemType } | { feature: SpecialFeature };
 }
 
