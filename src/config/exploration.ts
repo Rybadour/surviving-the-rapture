@@ -1,13 +1,17 @@
-import { ItemType, RoomConfig, RoomFeature } from "../shared/types";
+import { ItemType, LevelConfig, LevelId, RoomConfig, RoomFeature, RoomId } from "../shared/types";
 import mapData from "../../public/Map1Test.json";
-import { getFields, getLayerByName, getRefFields, LDTKEntityLayer, LDTKEntityReference } from "./ldtk-utils";
+import { getFields, getLayerByName, getRefFields, LDTKEntityLayer, LDTKEntityReference, LDTKLevel } from "./ldtk-utils";
 
 function getRoomIdFromRef(ref: LDTKEntityReference, layer: LDTKEntityLayer) {
   const entityId = getRefFields(ref, layer).id;
   return entityId ? entityId : ref.entityIid;
 }
 
-function transformItemsFieldIntoMap(items: string[]) {
+function transformItemsFieldIntoMap(items?: string[]) {
+  if (!items) {
+    return [];
+  }
+
   const itemsByType: Map<ItemType, number> = new Map();
   items.forEach((i) => {
     const type: ItemType = ItemType[i];
@@ -16,8 +20,15 @@ function transformItemsFieldIntoMap(items: string[]) {
   return itemsByType;
 }
 
-const rooms: Record<string, RoomConfig> = {};
+export const rooms: Record<RoomId, RoomConfig> = {};
+export const levels: Record<LevelId, LevelConfig> = {};
+
 mapData.levels.forEach((level) => {
+  const levelConfig: LevelConfig = {
+    id: level.identifier,
+    rooms: [],
+  };
+
   level.layerInstances.forEach((layer) => {
     layer.entityInstances
       .filter((entity) => entity.__identifier == "Room")
@@ -26,6 +37,9 @@ mapData.levels.forEach((level) => {
         let roomId = fields.id;
         if (!roomId) {
           roomId = entity.iid;
+        }
+        if (fields.staircaseUp) {
+          console.log(fields.staircaseUp);
         }
         rooms[roomId] = {
           id: roomId,
@@ -39,6 +53,7 @@ mapData.levels.forEach((level) => {
           explorationTime: fields.exploreTime,
           hasLighting: fields.hasLighting,
           feature: RoomFeature[fields.feature],
+          stairCaseUp: fields.staircaseUp ? getRoomIdFromRef(fields.staircaseUp, layer) : null,
           connectedRooms: fields.connectedRooms.map((ref: LDTKEntityReference) => getRoomIdFromRef(ref, layer)),
           explorations: fields.explorations
             .map(ref => {
@@ -48,13 +63,15 @@ mapData.levels.forEach((level) => {
             .filter(exploration => !!exploration)
             .map(exploration => ({
               items: transformItemsFieldIntoMap(exploration.items),
-              doorReveals: exploration.doorReveals.map(ref => getRoomIdFromRef(ref, layer)),
+              doorReveals: (exploration.doorReveals ?? []).map(ref => getRoomIdFromRef(ref, layer)),
               anecdote: exploration.anecdote,
               isImportant: exploration.isImportantDiscovery,
             })),
         };
+
+        levelConfig.rooms.push(roomId);
       });
   });
-});
 
-export default rooms;
+  levels[levelConfig.id] = levelConfig;
+});

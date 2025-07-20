@@ -11,6 +11,7 @@ import { ProgressBar } from "../progress-bar/progress-bar";
 import useStore from "../../store";
 import { ExplorationSlice } from "../../store/exploration";
 import { formatNumber } from "../../shared/utils";
+import globals from "../../config/global";
 
 export function Exploration() {
   const exploration = useStore(s => s.exploration);
@@ -73,14 +74,19 @@ export function Exploration() {
                   key={r}
                   onClick={() => onSelectRoom(room)}
                   style={{
-                    left: room.x,
-                    top: room.y,
-                    width: room.width,
-                    height: room.height,
+                    left: room.x * globals.MAP_ZOOM,
+                    top: room.y * globals.MAP_ZOOM,
+                    width: room.width * globals.MAP_ZOOM,
+                    height: room.height * globals.MAP_ZOOM,
                   }}
                 >
                   <div className="room-progress" style={{width: getRoomProgress(room) + "%"}}></div>
-                  <div className="label">{room.mapLabel}</div>
+                  <div className="relative z-1 flex items-center justify-center w-full h-full">
+                    <div className="font-bold">{room.mapLabel}</div>
+                  </div>
+                  {room.stairCaseUp && <div className="absolute top-0 bottom-0 -left-6 flex items-center">
+                    <img src="icons/3d-stairs.png" className="w-5 h-5" />
+                  </div>}
                 </div>
               </RaptureTooltip>
             ))}

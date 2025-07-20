@@ -1,4 +1,5 @@
-import { ItemsByType } from "../contexts/inventory";
+export type RoomId = string;
+export type LevelId = string;
 
 export enum ItemType {
   AAA_Battery = "AAA_Battery",
@@ -17,8 +18,10 @@ export enum ItemType {
   Wires = "Wires",
 }
 
+export type ItemsByType = Map<ItemType, number>;
+
 export interface RoomConfig {
-  id: string;
+  id: RoomId;
   name: string;
   mapLabel: string;
   x: number;
@@ -27,8 +30,9 @@ export interface RoomConfig {
   height: number;
   loot: ItemsByType;
   explorationTime: number;
-  connectedRooms: string[];
+  connectedRooms: RoomId[];
   hasLighting: boolean;
+  stairCaseUp?: RoomId;
   feature: RoomFeature;
   explorations: Exploration[];
 }
@@ -43,7 +47,7 @@ export type Room = RoomConfig & {
 
 export interface Exploration {
   items: ItemsByType;
-  doorReveals: string[];
+  doorReveals: RoomId[];
   anecdote: string;
   isImportant: boolean;
 }
@@ -60,5 +64,14 @@ export interface RecipeWithoutId {
   limit: number;
   result: { item: ItemType } | { feature: SpecialFeature };
 }
+
+export interface LevelConfig {
+  id: string;
+  rooms: RoomId[],
+}
+
+export type Level = LevelConfig & {
+  isDiscovered: boolean;
+};
 
 export type SpecialFeature = 'flashlight' | 'flashlight-battery';

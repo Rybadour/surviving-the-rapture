@@ -11,7 +11,7 @@
 	"iid": "0b9ff8a0-c640-11ed-8da3-e7ff4694b576",
 	"jsonVersion": "1.4.0",
 	"appBuildId": 470941,
-	"nextUid": 44,
+	"nextUid": 46,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -536,6 +536,41 @@
 					"editorDisplayScale": 1,
 					"editorDisplayPos": "Above",
 					"editorLinkStyle": "StraightArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "staircaseUp",
+					"doc": null,
+					"__type": "EntityRef",
+					"uid": 45,
+					"type": "F_EntityRef",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "RefLinkBetweenCenters",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "CurvedArrow",
 					"editorDisplayColor": null,
 					"editorAlwaysShow": false,
 					"editorShowInWorld": true,
@@ -1965,7 +2000,8 @@
 									"params": ["65e9a6a0-c640-11ed-8da3-5d056e88a751"]
 								} ] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2013,7 +2049,8 @@
 									"params": ["53363b10-c640-11ed-b858-4d1405938e5b"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2122,7 +2159,8 @@
 									"params": ["e08f08d0-c640-11ed-b858-01f64efe5e9b"]
 								} ] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2170,7 +2208,8 @@
 									"params": ["6367e420-c640-11ed-b858-d94c38dbdf4d"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2229,7 +2268,8 @@
 									"params": ["9cd0da00-c640-11ed-b858-65a1046afcc2"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2329,7 +2369,8 @@
 									"params": ["184beb70-c640-11ed-8da3-1306cd0542c3"]
 								} ] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2377,7 +2418,8 @@
 									"params": ["a8db4790-c640-11ed-b858-ff80e6587192"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2489,7 +2531,8 @@
 									"params": ["4dee9510-c640-11ed-8da3-8bd7735079f5"]
 								} ] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2545,7 +2588,8 @@
 									"params": ["b252ae30-c640-11ed-b858-0fde20579931"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2717,7 +2761,8 @@
 									}
 								] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2768,7 +2813,8 @@
 									"params": ["bdc21440-c640-11ed-b858-4fd90ddc9462"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2824,7 +2870,8 @@
 									"params": ["c0eaa470-c640-11ed-b858-95bc3d7f4b5f"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2906,7 +2953,8 @@
 									"params": ["ce1bb150-c640-11ed-8da3-e7a96dfa9eaf"]
 								} ] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -2954,7 +3002,8 @@
 									"params": ["c886bb60-c640-11ed-b858-37a2241270f6"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -3011,7 +3060,16 @@
 									"params": ["cc2713a0-c640-11ed-b858-15b9ab654adb"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": {
+									"entityIid": "80748010-5e50-11f0-ba76-49c3a63f1786",
+									"layerIid": "7af6cf91-5e50-11f0-ba76-65b5755b8752",
+									"levelIid": "7af6a880-5e50-11f0-ba76-8b5c374fd1fe",
+									"worldIid": "57999390-5e50-11f0-8e61-67db307261bf"
+								}, "__tile": null, "defUid": 45, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["80748010-5e50-11f0-ba76-49c3a63f1786"]
+								}] }
 							]
 						},
 						{
@@ -3114,7 +3172,8 @@
 									"params": ["54307330-c640-11ed-8da3-975874a7c1c8"]
 								} ] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -3168,7 +3227,8 @@
 									"params": ["e3ef7c70-c640-11ed-b858-d538d69be675"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -3222,7 +3282,8 @@
 									"params": ["65676830-c640-11ed-b858-3d53477bc31f"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
 							]
 						},
 						{
@@ -3276,7 +3337,149 @@
 									"params": ["67d2c2e0-c640-11ed-b858-899e7872364d"]
 								}] },
 								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
-								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] }
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
+							]
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		},
+		{
+			"identifier": "World_Level_1",
+			"iid": "7af6a880-5e50-11f0-ba76-8b5c374fd1fe",
+			"uid": 44,
+			"worldX": 880,
+			"worldY": 0,
+			"worldDepth": 0,
+			"pxWid": 1056,
+			"pxHei": 840,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__smartColor": "#ADADB5",
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [],
+			"layerInstances": [
+				{
+					"__identifier": "Explorations",
+					"__type": "Entities",
+					"__cWid": 132,
+					"__cHei": 105,
+					"__gridSize": 8,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "7af6cf90-5e50-11f0-ba76-fda1813293c0",
+					"levelId": 44,
+					"layerDefUid": 38,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 3417910,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": []
+				},
+				{
+					"__identifier": "Rooms",
+					"__type": "Entities",
+					"__cWid": 132,
+					"__cHei": 105,
+					"__gridSize": 8,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"iid": "7af6cf91-5e50-11f0-ba76-65b5755b8752",
+					"levelId": 44,
+					"layerDefUid": 1,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 6442766,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Room",
+							"__grid": [28,17],
+							"__pivot": [0,0],
+							"__tags": [ "region", "room" ],
+							"__tile": null,
+							"__smartColor": "#94D9B3",
+							"__worldX": 1104,
+							"__worldY": 136,
+							"iid": "80748010-5e50-11f0-ba76-49c3a63f1786",
+							"width": 24,
+							"height": 24,
+							"defUid": 3,
+							"px": [224,136],
+							"fieldInstances": [
+								{ "__identifier": "id", "__type": "String", "__value": null, "__tile": null, "defUid": 8, "realEditorValues": [] },
+								{ "__identifier": "name", "__type": "String", "__value": "Stair Case", "__tile": null, "defUid": 6, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Stair Case"]
+								}] },
+								{ "__identifier": "mapLabel", "__type": "String", "__value": null, "__tile": null, "defUid": 22, "realEditorValues": [] },
+								{ "__identifier": "items", "__type": "Array<LocalEnum.Items>", "__value": [], "__tile": null, "defUid": 7, "realEditorValues": [] },
+								{ "__identifier": "exploreTime", "__type": "Int", "__value": 10, "__tile": null, "defUid": 9, "realEditorValues": [] },
+								{ "__identifier": "connectedRooms", "__type": "Array<EntityRef>", "__value": [], "__tile": null, "defUid": 11, "realEditorValues": [] },
+								{ "__identifier": "hasLighting", "__type": "Bool", "__value": true, "__tile": null, "defUid": 12, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "feature", "__type": "LocalEnum.RoomFeatures", "__value": null, "__tile": null, "defUid": 14, "realEditorValues": [] },
+								{ "__identifier": "capacityItems", "__type": "Array<String>", "__value": [], "__tile": null, "defUid": 23, "realEditorValues": [] },
+								{ "__identifier": "explorations", "__type": "Array<EntityRef>", "__value": [{
+									"entityIid": "a38ae440-5e50-11f0-ba76-05b0a8c01a64",
+									"layerIid": "7af6cf91-5e50-11f0-ba76-65b5755b8752",
+									"levelIid": "7af6a880-5e50-11f0-ba76-8b5c374fd1fe",
+									"worldIid": "57999390-5e50-11f0-8e61-67db307261bf"
+								}], "__tile": null, "defUid": 34, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["a38ae440-5e50-11f0-ba76-05b0a8c01a64"]
+								}] },
+								{ "__identifier": "unlockPowerRequired", "__type": "Int", "__value": null, "__tile": null, "defUid": 21, "realEditorValues": [] },
+								{ "__identifier": "unlockItemRequired", "__type": "LocalEnum.Items", "__value": null, "__tile": null, "defUid": 43, "realEditorValues": [] },
+								{ "__identifier": "staircaseUp", "__type": "EntityRef", "__value": null, "__tile": null, "defUid": 45, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Exploration",
+							"__grid": [25,17],
+							"__pivot": [0,0],
+							"__tags": ["exploration"],
+							"__tile": null,
+							"__smartColor": "#0099DB",
+							"__worldX": 1080,
+							"__worldY": 136,
+							"iid": "a38ae440-5e50-11f0-ba76-05b0a8c01a64",
+							"width": 16,
+							"height": 16,
+							"defUid": 32,
+							"px": [200,136],
+							"fieldInstances": [
+								{ "__identifier": "time", "__type": "Int", "__value": 10, "__tile": null, "defUid": 33, "realEditorValues": [] },
+								{ "__identifier": "items", "__type": "Array<LocalEnum.Items>", "__value": [], "__tile": null, "defUid": 35, "realEditorValues": [] },
+								{ "__identifier": "doorReveals", "__type": "Array<EntityRef>", "__value": [], "__tile": null, "defUid": 36, "realEditorValues": [] },
+								{ "__identifier": "anecdote", "__type": "String", "__value": null, "__tile": null, "defUid": 37, "realEditorValues": [] },
+								{ "__identifier": "isImportantDiscovery", "__type": "Bool", "__value": false, "__tile": null, "defUid": 39, "realEditorValues": [] }
 							]
 						}
 					]

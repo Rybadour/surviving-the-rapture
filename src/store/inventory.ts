@@ -1,8 +1,7 @@
 import { MyCreateSlice } from ".";
 import { Recipe } from "../config/recipes";
-import { ItemType } from "../shared/types";
+import { ItemsByType, ItemType } from "../shared/types";
 
-export type ItemsByType = Map<ItemType, number>;
 
 export interface InventorySlice {
   items: ItemsByType,

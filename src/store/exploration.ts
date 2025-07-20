@@ -1,12 +1,14 @@
 import { MyCreateSlice } from ".";
-import { Room } from "../shared/types";
-import roomConfig from "../config/exploration";
+import { Level, LevelId, Room } from "../shared/types";
+import { rooms, levels } from "../config/exploration";
 import { InventorySlice } from "./inventory";
 import { StorySlice } from "./story";
+import globals from "../config/global";
 
 export interface ExplorationSlice {
   isExploring: boolean;
   progress: number;
+  levels: Record<LevelId, Level>;
   rooms: Record<string, Room>;
   selectedRoom: string;
 
@@ -19,9 +21,9 @@ export interface ExplorationSlice {
 
 const startingRoom = "garage";
 const defaultRooms: Record<string, Room> = {};
-Object.keys(roomConfig).forEach((roomId) => {
+Object.keys(rooms).forEach((roomId) => {
   defaultRooms[roomId] = {
-    ...roomConfig[roomId],
+    ...rooms[roomId],
     isDiscovered: roomId == startingRoom,
     isKnown: false,
     isExplored: false,
@@ -30,11 +32,27 @@ Object.keys(roomConfig).forEach((roomId) => {
   };
 });
 
+const startingLevel = "Basement";
+const defaultLevels: Record<LevelId, Level> = {};
+Object.keys(levels).forEach((levelId) => {
+  defaultLevels[levelId] = {
+    ...levels[levelId],
+    isDiscovered: levelId == startingLevel,
+  };
+
+  if (globals.FLOORS_TO_REVEAL.includes(levelId)) {
+    for (let roomId of levels[levelId].rooms) {
+      defaultRooms[roomId].isDiscovered = true;
+    }
+  }
+});
+
 const createExplorationSlice: MyCreateSlice<ExplorationSlice, [() => InventorySlice, () => StorySlice]> =
 (set, get, inventory, story) => {
   return {
     isExploring: false,
     progress: 0,
+    levels: defaultLevels,
     rooms: defaultRooms,
     selectedRoom: "",
 
